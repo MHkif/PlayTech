@@ -17,6 +17,12 @@
 }
 
 @media screen and (max-width: 756px) {
+    .nav__list {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        row-gap: 2rem;
+      }
     .nav__menu{
         position: fixed;
         top: -100%;
@@ -28,6 +34,7 @@
         transition: top .4s;
     }
     
+
  .show-menu{
     top:0;
  }
