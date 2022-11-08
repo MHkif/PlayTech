@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lexend+Exa:wght@500;600&family=Poppins:wght@400;500;600&display=swap');
+
+
+
+/* ============ Varibles CSS =============*/
+
+:root{
+    --header-height: 3.5rem;
+
+    /* ==== Colors ==== */
+    --first-color: hsl(19, 64%, 54%);
+    --first_color_alt: hsl(19,64%, 52%);
+    --title-color: white;
+    --text-color: white;
+    --body-color: linear-gradient(179.95deg, #550C8E 0.05%, rgba(237, 25, 165, 0.692708) 44.77%, rgba(157, 10, 125, 0.56) 82.78%, rgba(138, 50, 140, 0.54) 99.95%);
+
+    --container-color: white;
+
+     /* ========= FONT and TYPOGRAPHY ============= */
+    --body-font:   'Poppins', sans-serif;
+    --title-font: 'Poppins', sans-serif;
+    --subtitle-font: 'Poppins', sans-serif;
+    --biggest-font-size : 2.25rem;
+    --h1-font-size: 1.25rem;
+    --h2-font-size:1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font_size: .938rem;
+    --small-font-size: .813rem;
+    --samll-font-size: .75rem
+    
+    /* ========== FONT WEIGHT ========== */
+    --z-tooltip: 10;
+    --z-fixed : 100;
+
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font_size);
+    color: var(--text-color);
+    background-image: url(../assets/imgs/bg_image.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+}
+
+/*  ========= REUSABLE CSS CLASSES ======== */
+.container{
+/* max-width: 1024px; */
+margin-inline: 1.5rem;
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section{
+    padding-block: 5rem 1rem;
+}
+
+.section_title{
+    font-size: var(--h1-font-size);
+    font-family: var(--title-font);
+    margin-bottom: 1.5rem;
+}
+
+.section_subtitle{
+display: block;
+font-size: var(--h2-font-size);
+font-family: var(--subtitle-font);
+color: var(--first-color);
+margin-bottom: .5rem;
+}
+
+.section_title, .section_subtitle{
+    text-align: center;
+}
+
+
+
+
+h1,h2, h3{
+    color :var(--text-color);
+    font-weight: 500;
+}
+
+ul{
+    list-style: none; 
+}
+
+a{
+    text-decoration: none;
+    color: white  ;
+}
+
+img{
+max-width: 100%;
+height: auto;
+}
+
+.main{
+    overflow: hidden;
+}
+
+/* ===== HEADER & NAV */
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color:white 0.0%;
+    z-index: var(--z-fixed);
+    transition: box-shadow .3s, background .4s;
+}
+
+.nav{
+    position: relative;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo,
+.nav__toggle,
+.nav_close{
+    display: flex;
+    color: var(--title-color);
+}
+
+.nav__logo{
+    align-items: center;
+    column-gap: .5rem;
+    font-family: var(--title-font);
+    font-size: var(--h3-font-size);
+    font-weight: 600;
+    transition: color .3s;  
+}
+
+.nav__logo img{
+width: 40px
+}
+
+.nav__logo:hover{
+color: #2D2D2D;
+box-shadow: 6px 8px #d4c9ddce;
+}
+
+.nav__toggle{
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+
+
+.nav__list{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 2rem;
+}
+
+.nav__link{
+    color: var(--title-color);
+    font-weight: 500;
+    transition: color .4s;
+}
+
+.nav__link:hover{
+    color: var(--first-color);
+}
+
+.nav__close{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer; 
+ }
