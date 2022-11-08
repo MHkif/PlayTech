@@ -58,7 +58,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 0 30px;
+  padding: 20px 0;
 }
 
 nav ul li {
@@ -98,7 +98,7 @@ nav ul li.btn a {
 }
 
 .content {
-  padding-top: 140px;
+  padding-top: 80px;
 }
 
 .content .main-text {
@@ -142,7 +142,7 @@ nav ul li.btn a {
   color: black;
   background: white;
   border: 1px solid white;
-  padding: 9px 25px;
+  padding: 19px 16px;
   line-height: 1.4px;
   border-radius: 30px;
   font-size: 14px;
@@ -164,7 +164,7 @@ nav ul li.btn a {
   margin-left: 20px;
 }
 
-.content .main-text a.cta i {
+.content .main-text a i {
   margin-right: 12px;
 }
 
