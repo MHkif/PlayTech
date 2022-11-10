@@ -20,16 +20,9 @@ a {
   text-decoration: none;
 }
 
-.main-width {
-  width: 1400px;
-  max-width: 95%;
-  margin: 0 auto;
-}
-
 .hero {
   height: 100vh;
   width: 100%;
-  min-height: 100vh;
   position: relative;
   background: linear-gradient(
     109.6deg,
@@ -58,7 +51,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 10px 20px;
+  
 }
 
 nav ul li {
@@ -86,40 +80,40 @@ nav ul li.active a {
 }
 
 nav ul li.btn a {
-  background: transparent;
   color: white;
-  border: 1px solid #f5dca8;
   padding: 9px 20px;
-  border-radius: 30px;
-  line-height: 1.4;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
+  display: none;
   /* margin-left: 150px; */
 }
 
 .content {
-  padding: 60px 50px;
-  height: 90vh;
+  padding: 20px 50px;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .content .main-text {
-  position: relative;
-  z-index: 2;
+  /* z-index: 2; */
   padding-bottom: 50px;
+  width: 50%;
 }
 
 .content .main-text h6 {
   font-size: 14px;
   font-weight: 400;
   color: white;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 
 .content .main-text h1 {
-  font-size: 60px;
+  font-size: 45px;
   line-height: 1;
   color: white;
-  padding: 0px 0px 35px;
+  padding: 0px 0px 30px;
 }
 
 .content .main-text h3 {
@@ -131,11 +125,10 @@ nav ul li.btn a {
 
 .content .main-text p {
   max-width: 100%;
-  width: 480px;
   color: white;
   line-height: 1.8;
-  font-size: 15px;
-  padding-bottom: 40px;
+  font-size: 14px;
+  padding-bottom: 30px;
 }
 
 .content .main-text a {
@@ -178,28 +171,27 @@ nav ul li.btn a {
 }
 
 .image {
-  position: absolute;
   width: 100%;
-  height: 85%;
+  height: 70vh;
   bottom: 0;
   right: 0;
   text-align: right;
+  padding-bottom: 50px;
 }
 
 .image img {
-  height: 100%;
+  height: 95%;
 }
 
-
-.product-inner-box .onsale .badge{
+.product-inner-box .onsale .badge {
   background: #000;
   font-size: 12px;
   padding: 5px 14px;
   top: 0px;
- position: absolute;
+  position: absolute;
 }
 
-.product-inner-box .onsale .badge:before{
+.product-inner-box .onsale .badge:before {
   border-width: 10px 0px 0px 10px;
   border-color: transparent transparent transparent #000;
   content: "";
@@ -210,9 +202,9 @@ nav ul li.btn a {
   border-style: solid;
 }
 
-.product-inner-box .onsale .badge:after{
+.product-inner-box .onsale .badge:after {
   border-width: 10px 8px 0px 10px;
-  border-color: #000 transparent transparent  ;
+  border-color: #000 transparent transparent;
   content: "";
   position: absolute;
   right: -8px;
@@ -221,29 +213,106 @@ nav ul li.btn a {
   border-style: solid;
 }
 
-.product-inner-box img{
+.product-inner-box img {
   border-radius: 20px;
-box-shadow: 0 33px 61px -29px rgb(0 0 0 / 26%);
-height: 250px;
-width: 100%;
+  box-shadow: 0 33px 61px -29px rgb(0 0 0 / 26%);
+  height: 250px;
+  width: 100%;
 }
 
-.product-box.is-hover .icons{
+.product-box.is-hover .icons {
   transform: rotateY(-3%);
   top: 3%;
   opacity: 1;
 }
 
-.cart-btn{
+.cart-btn {
   position: absolute;
   bottom: 20px;
   text-align: center;
   width: 100%;
   opacity: 0;
-  transition: all 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out, transform 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
 }
 
-.product-box.is-hover .cart-btn{
+.product-box.is-hover .cart-btn {
   opacity: 1;
+}
 
+/* =========  RESPONSIVE ======== */
+@media (max-width: 700px) {
+  .hero header .logo h2 a {
+    display: flex;
+    font-size: 18px;
+  }
+  .logo {
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    transition: color 0.3s;
+    text-align: center;
+  }
+  .logo img {
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero header {
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    display: none;
+  }
+
+  nav ul li.btn a {
+    display: flex;
+  }
+
+  .content {
+    /* display: flex; */
+    flex-direction: column-reverse;
+    height: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .content .main-text {
+    width: 90%;
+  }
+  .image {
+    height: 40vh;
+    padding: 0%;
+  }
+  .image img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .content .main-text h6 {
+    font-size: 10px;
+    padding-bottom: 10px;
+  }
+
+  .content .main-text h1 {
+    font-size: 22px;
+    padding: 0px 0px 15px;
+  }
+
+  .content .main-text p {
+    color: white;
+    font-size: 10px;
+    padding-bottom: 10px;
+    font-weight: 300;
+  }
+
+  .content .main-text a {
+    padding: 16px 13px;
+    font-size: 12px;
+  }
 }
