@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;600&family=Poppins:wght@500;600&family=Roboto:wght@100;300;500;700&family=Ubuntu:wght@300;500&display=swap");
 
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -7,6 +8,33 @@
   font-family: "Poppins", sans-serif;
 }
 
-.hidden {
-  display: none;
+.bg-light{
+  background-color: transparent !important;
 }
+
+.carousel-item{
+  height: 90vh;
+  min-height: 300px;
+}
+
+.carousel-caption{
+  bottom: 220px;
+}
+
+.carousel-caption h5{
+  width: 60%;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.carousel-caption a{
+  text-transform: uppercase;
+  text-decoration: none;
+  background: darkorange;
+  padding: 10px 30px;
+  display: inline-block;
+  color: #000; 
+}
+
+
