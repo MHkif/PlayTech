@@ -1,4 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;600&family=Poppins:wght@500;600&family=Roboto:wght@100;300;500;700&family=Ubuntu:wght@300;500&display=swap");
+nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  margin-left: 60px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: 0.4s;
+}
+
+nav ul li:not(:last-child) a:hover,
+nav ul li:not(:last-child) a:focus {
+  border-bottom: 2px solid rgb(55, 53, 53);
+}
+
+nav ul li.active a {
+  border-bottom: 2px solid white;
+}
+
+nav ul li.btn a {
+  color: white;
+  padding: 9px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  display: none;
+
+}
 
 
 * {
@@ -7,7 +39,9 @@
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
-
+.navbar-toggler{
+  border: none !important;
+}
 .bg-light{
   background-color: transparent !important;
 }
