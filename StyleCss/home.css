@@ -10,6 +10,7 @@
 
 body {
   overflow-x: hidden;
+  /* background: linear-gradient(to top, #dfe9f3 0%, white 100%); */
 }
 
 ul {
@@ -31,6 +32,8 @@ a {
     rgb(122, 2, 54) 100.2%
   );
 
+  /* background: linear-gradient(to top, #dfe9f3 0%, white 100%); */
+  /* background: 0%; */
   /* border-end-end-radius: 60px;
   border-end-start-radius: 60px; */
 }
