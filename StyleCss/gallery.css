@@ -1,37 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;600&family=Poppins:wght@500;600&family=Roboto:wght@100;300;500;700&family=Ubuntu:wght@300;500&display=swap");
-nav ul li {
-  list-style: none;
-  display: inline-block;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  margin-left: 60px;
-  font-size: 15px;
-  font-weight: 600;
-  border-bottom: 2px solid transparent;
-  transition: 0.4s;
-}
-
-nav ul li:not(:last-child) a:hover,
-nav ul li:not(:last-child) a:focus {
-  border-bottom: 2px solid rgb(55, 53, 53);
-}
-
-nav ul li.active a {
-  border-bottom: 2px solid white;
-}
-
-nav ul li.btn a {
-  color: white;
-  padding: 9px 20px;
-  font-size: 18px;
-  font-weight: 500;
-  display: none;
-
-}
-
 
 * {
   box-sizing: border-box;
@@ -39,15 +6,27 @@ nav ul li.btn a {
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
+.navbar{
+  background: #31313168;
+  backdrop-filter: satutzte(200%) blur(3px);
+}
+.nav-link{
+color: aliceblue !important;
+
+}
+.nav-link.active{
+font-weight: bold !important;
+scale: 1.2 !important;
+/* border-bottom: 3px solid #000; */
+}
+
+
 .navbar-toggler{
   border: none !important;
 }
-.bg-light{
-  background-color: transparent !important;
-}
 
 .carousel-item{
-  height: 90vh;
+  height: 80vh;
   min-height: 300px;
 }
 
@@ -58,8 +37,9 @@ nav ul li.btn a {
 .carousel-caption h5{
   width: 60%;
   margin: auto;
-  font-size: 18px;
-  line-height: 1.9;
+  font-size: 41px;
+  line-height: 8.9;
+  font-family: 'Neuropol X Free', sans-serif;
 }
 
 .carousel-caption a{
@@ -70,5 +50,15 @@ nav ul li.btn a {
   display: inline-block;
   color: #000; 
 }
-
+@keyframes animated{
+  
+  0%{
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 

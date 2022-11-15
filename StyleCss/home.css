@@ -7,7 +7,19 @@
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
+.navbar{
+  background: #31313168;
+  backdrop-filter: satutzte(200%) blur(3px);
+}
+.nav-link{
+color: aliceblue !important;
 
+}
+.nav-link.active{
+font-weight: bold !important;
+scale: 1.2 !important;
+/* border-bottom: 3px solid #000; */
+}
 body {
   overflow-x: hidden;
 }
@@ -31,8 +43,6 @@ a {
     rgb(122, 2, 54) 100.2%
   );
 
-  /* border-end-end-radius: 60px;
-  border-end-start-radius: 60px; */
 }
 .hero header .logo h2 a {
   display: block;
@@ -51,46 +61,10 @@ a {
   width: 50px;
 }
 
-/* .hero header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  
-} */
 
-nav ul li {
-  list-style: none;
-  display: inline-block;
-}
 
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  margin-left: 60px;
-  font-size: 15px;
-  font-weight: 600;
-  border-bottom: 2px solid transparent;
-  transition: 0.4s;
-}
 
-nav ul li:not(:last-child) a:hover,
-nav ul li:not(:last-child) a:focus {
-  border-bottom: 2px solid white;
-}
 
-nav ul li.active a {
-  border-bottom: 2px solid white;
-}
-
-nav ul li.btn a {
-  color: white;
-  padding: 9px 20px;
-  font-size: 18px;
-  font-weight: 500;
-  display: none;
-  /* margin-left: 150px; */
-}
 
 .content {
   padding: 20px 50px;
