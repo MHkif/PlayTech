@@ -26,29 +26,44 @@
 
     <title>Play Tech</title>
   </head>
-
   <body>
     <section class="hero shadow bg-black">
       <div class="main-width">
-        <header>
-          <div class="logo">
-            <img src="../assets/imgs/logo.png" alt="Logo image" />
-            <h2>
-              <a href="#">PlayTech</a>
-            </h2>
-          </div>
-          <nav>
-            <ul>
-              <li class="active"><a href="">Home</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="#">Contact us</a></li>
-              <li class="btn">
-                <a href="#"><i class="ri-apps-2-line"></i></a>
-              </li>
-            </ul>
-          </nav>
-        </header>
-        <div class="content">
+         <!-- Navbar  -->
+ <nav class="navbar fixed-top navbar-expand-lg navbar-dark ">
+  <div class="container-fluid">
+    <a href="#" class="navbar-brand">
+      <img src="../assets/imgs/logo.png"alt="Logo image"width="60"class="d-inline-block"/>
+      <span class=""> PlayTech </span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#toggleMobileMenu"
+      aria-controls="toggleMobileMenu"
+      aria-label="Toggle navigation"
+    >
+    <i class="ri-apps-2-line"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="toggleMobileMenu">
+      <ul class="navbar-nav ms-auto text-center">
+        <li>
+          <a href="./home.html" class="nav-link  active  mx-4">Home</a>
+        </li>
+        <li>
+          <a href="./gallery.html" class="nav-link mx-4">Gallery</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link  mx-4">Contact us</a>
+        </li>
+   
+      </ul>
+    </div>
+  </div>
+</nav>
+    <!-- </div> -->
+     <div class="content">
           <div class="main-text">
             <h6>#1 Trending</h6>
             <h1>PS5</h1>
@@ -434,8 +449,9 @@
       </div>
     </section>
     <!-- JS SCRIPTS -->
-    <script src="../ScriptJs/main.js"></script>
+    <!-- <script src="../ScriptJs/main.js"></script> -->
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/all.min.js"></script>
+    
   </body>
 </html>
