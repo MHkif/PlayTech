@@ -135,12 +135,10 @@ a {
   border: 1px solid #f5dca8;
   color: white;
   background: transparent;
-  /* margin-left: 20px; */
+
 }
 
-/* .content .main-text a i {
-  margin-right: 12px;
-} */
+
 
 .content .main-text a.cta:hover {
   color: black;
@@ -226,44 +224,13 @@ a {
     rgb(122, 2, 54) 100.2%
   ) !important
 
-  /* border-end-end-radius: 60px;
-  border-end-start-radius: 60px; */
+ 
 }
-
+.footer {
+  border-top-left-radius: 125px;
+}
 /* =========  RESPONSIVE ======== */
 @media (max-width: 700px) {
-  /* .hero header .logo h2 a {
-    display: flex;
-    font-size: 18px;
-  }
-  .logo {
-    align-items: center;
-    justify-content: center;
-    gap: 0.3rem;
-    transition: color 0.3s;
-    text-align: center;
-  }
-  .logo img {
-    width: 40px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hero header {
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: space-between; */
-    /* padding: 10px 0; */
-  /* }  */
-  
-/* 
-  nav ul li {
-    display: none;
-  }
-
-  nav ul li.btn a {
-    display: flex;
-  } */
 
   .content {
     /* display: flex; */
@@ -306,4 +273,11 @@ a {
     padding: 16px 13px;
     font-size: 12px;
   }
+}
+#cate{ 
+  text-decoration: none;
+}
+.shadow:hover{
+  box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(60, 55, 76), 0 0 50px rgb(4, 20, 83) !important;  
+
 }
