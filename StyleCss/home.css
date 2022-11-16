@@ -225,44 +225,13 @@ a {
     rgb(122, 2, 54) 100.2%
   ) !important
 
-  /* border-end-end-radius: 60px;
-  border-end-start-radius: 60px; */
+ 
 }
-
+.footer {
+  border-top-left-radius: 125px;
+}
 /* =========  RESPONSIVE ======== */
 @media (max-width: 700px) {
-  /* .hero header .logo h2 a {
-    display: flex;
-    font-size: 18px;
-  }
-  .logo {
-    align-items: center;
-    justify-content: center;
-    gap: 0.3rem;
-    transition: color 0.3s;
-    text-align: center;
-  }
-  .logo img {
-    width: 40px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hero header {
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: space-between; */
-    /* padding: 10px 0; */
-  /* }  */
-  
-/* 
-  nav ul li {
-    display: none;
-  }
-
-  nav ul li.btn a {
-    display: flex;
-  } */
 
   .content {
     /* display: flex; */

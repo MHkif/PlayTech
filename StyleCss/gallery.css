@@ -50,15 +50,9 @@ scale: 1.2 !important;
   display: inline-block;
   color: #000; 
 }
-@keyframes animated{
-  
-  0%{
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  100%{
-    opacity: 1;
-    transform: translateX(0px);
-  }
+.footer {
+  border-top-left-radius: 125px;
 }
+
+
 
