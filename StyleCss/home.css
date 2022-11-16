@@ -135,12 +135,10 @@ a {
   border: 1px solid #f5dca8;
   color: white;
   background: transparent;
-  /* margin-left: 20px; */
+
 }
 
-/* .content .main-text a i {
-  margin-right: 12px;
-} */
+
 
 .content .main-text a.cta:hover {
   color: black;
@@ -275,4 +273,11 @@ a {
     padding: 16px 13px;
     font-size: 12px;
   }
+}
+#cate{ 
+  text-decoration: none;
+}
+.shadow:hover{
+  box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(60, 55, 76), 0 0 50px rgb(4, 20, 83) !important;  
+
 }

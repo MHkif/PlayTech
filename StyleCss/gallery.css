@@ -41,7 +41,6 @@ scale: 1.2 !important;
   line-height: 8.9;
   font-family: 'Neuropol X Free', sans-serif;
 }
-
 .carousel-caption a{
   text-transform: uppercase;
   text-decoration: none;
@@ -54,5 +53,115 @@ scale: 1.2 !important;
   border-top-left-radius: 125px;
 }
 
+#card:hover{
+    box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(142, 4, 112), 0 0 50px rgb(83, 4, 73) !important;
+}
+#img{
+  opacity: 0;
+  transition-duration: 0.75s;
+}
+#imgp{
+  background-image: url(./../assets/accessories/2.png);
+  background-size: cover;
+}
+#imgp:hover{
+  background:none;
+}
+#img:hover{
+  opacity: 1;
+  transition-duration: 2s;
+ 
+}
+#imgp1{
+  background-image: url(./../assets/accessories/3.png);
+  background-size: cover;
+}
+#imgp1:hover{
+  background:none;
+}
+#imgp2{
+  background-image: url(./../assets/accessories/7.png);
+  background-size: cover;
+}
+#imgp2:hover{
+  background:none;
+}
+#imgp3{
+  background-image: url(./../assets/accessories/10.png);
+  background-size: cover;
+}
+#imgp3:hover{
+  background:none;
+}
+#imgp4{
+  background-image: url(./../assets/laptop/atlas-gaming-asus-rog-strix-g17-b-removebg-preview.png);
+  background-size: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#imgp4:hover{
+  background:none;
+}
+#imgp5{
+  background-image: url(./../assets/laptop/atlas-gaming-msi-gf65-a-1-removebg-preview.png);
+  background-size: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#imgp5:hover{
+  background:none;
+}
+#imgp6{
+  background-image: url(./../assets/laptop/easy-gaming-acer-nitro-5-1-removebg-preview.png);
+  background-size: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#imgp6:hover{
+  background:none;
+}
+#imgp7{
+  background-image: url(./../assets/disktop/2.png);
+  background-size: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#imgp7:hover{
+  background:none;
+}
+#imgp8{
+  background-image: url(./../assets/disktop/4.png);
+  background-size: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#imgp8:hover{
+  background:none;
+}
 
 
+
+h1 {
+  color: hsl(0, 0%, 0%);
+  font-family: monospace;
+  font-size: 30px !important;
+}
+
+h1 {
+  background: linear-gradient(to right, hsl(0, 0%, 0%) 0, hsl(300, 7%, 94%) 10%, hsl(0, 0%, 30%) 20%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 600px;
+  }
+  100% {
+    background-position: 600px;
+  }
+}
