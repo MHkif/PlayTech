@@ -25,50 +25,73 @@
   </head>
   <body>
     <div class="main-container d-flex">
-      <div class="sidebar" id="side_nav">
+      <div class="row-cols-md sidebar d-sm-block" id="side_nav">
         <div class="header-box px-3 pt-3 pb-4 d-flex justify-content-between">
           <h1 class="fs-5">
             <span class="bg-white text-dark rounded shadow px-2">P</span>
             <span class="text-white">layTech</span>
           </h1>
-          <button class="btn-close btn-close-white close-btn"></button>
+          <!-- <button class="btn- btn-close-white close-btn"></button> -->
+
+          <a href="#" class="text-decoration-none text-white">
+            <i class="ri-menu-2-line collapse-btn"></i
+          ></a>
+          <!-- <a href="#" class="text-decoration-none text-white">
+            <i class="ri-menu-3-line"></i
+          ></a> -->
         </div>
 
-        <ul class="list-unstyled px-2">
-          <li class="active">
-            <a href="#" class="text-decoration-none">
-              <i class="ri-home-5-line"></i> Dashboard
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="mx-3 my-1 active">
+            <a
+              href="#"
+              class="nav-link d-flex align-items-center gap-2"
+              aria-current="page"
+            >
+              <i class="ri-home-5-line fs-5"></i>
+              <div class="">Home</div>
             </a>
           </li>
-          <li class="">
-            <a href="#" class="text-decoration-none">
-              <i class="ri-discuss-line"></i>Message
+          <li class="mx-3 my-1">
+            <a
+              href="#"
+              class="nav-link text-white d-flex align-items-center gap-2"
+              aria-current="page"
+            >
+              <i class="ri-dashboard-line fs-5"></i>
+              Dashboard
             </a>
           </li>
-          <li class="">
-            <a href="#" class="text-decoration-none">
-              <i class="ri-key-2-line"></i>
-              password
+          <li class="mx-3 my-1">
+            <a
+              href="#"
+              class="nav-link text-white d-flex align-items-center gap-2"
+              aria-current="page"
+            >
+              <i class="ri-bar-chart-2-line fs-5"></i>
+              Statistique
             </a>
           </li>
-
-          <li class="">
-            <a href="#" class="text-decoration-none">
-              <i class="ri-questionnaire-line"></i> Help
-            </a>
-          </li>
-          <li class="">
-            <a href="#" class="text-decoration-none">
-              <i class="ri-logout-box-r-line"></i> Log Out
+          <li class="mx-3 my-1">
+            <a
+              href="#"
+              class="nav-link text-white d-flex align-items-center gap-2"
+              aria-current="page"
+            >
+              <i class="ri-layout-grid-fill fs-5"></i>
+              Products
             </a>
           </li>
         </ul>
-        <hr class="h-color mx-3" />
-        <ul class="list-unstyled px-2">
-          <li class="">
-            <a href="#" class="text-decoration-none">
-              <i class="ri-settings-4-line"></i>
-              <span class="title"> Setting</span>
+
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="mx-3 my-1">
+            <a
+              href="#"
+              class="nav-link text-white d-flex align-items-center gap-2"
+            >
+              <i class="ri-login-box-line fs-5"></i>
+              Log out
             </a>
           </li>
         </ul>
@@ -121,6 +144,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script>
+      const d = document.getElementById('dsfs').style.left
+      
       $(".sidebar ul li").on("click", function () {
         $(".sidebar ul li.active").removeClass("active");
         $(this).addClass("active");
@@ -131,14 +156,44 @@
       });
 
       $(".close-btn").on("click", function () {
-        $(".sidebar").removeClass("active");
+        $(".sidebar").removeClass("collapse");
+      });
+// ===========
+      $(".sidebar a").on("click", function () {
+        $(".sidebar a.collapse").removeClass("collapse");
+        $(this).addClass("collapse");
+      });
+
+      $(".collapse-btn").on("click", function () {
+        $(".sidebar").addClass("collapse");
+      });
+
+      $(".collapse-btn-btn").on("click", function () {
+        $(".sidebar").removeClass("collapse");
       });
     </script>
     <!-- JS SCRIPTS -->
     <!-- <script src="../ScriptJs/main.js"></script> -->
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/all.min.js"></script>
+    <script>
+      window.onload = function (){
+        const sidebar = document.querySelector('.sidebar');
+        const closeBtn = document.querySelector('#btn');
+        
+        closeBtn.addEventListener("click", function(){
+          sidebar.classList.toggle("open")
+        });
 
+        function menuBtnChange(){
+          if(sidebar.classList.contains("open")){
+           closeBtn.classList.replace("ri-menu-2-line", "ri-menu-3-line"); 
+          }else{
+            closeBtn.classList.replace( "ri-menu-3-line", "ri-menu-2-line"); 
+          }
+        }
+      }
+    </script>
     <!-- <script>
       // MenuToggle
       let toggle = document.querySelector(".toggle");

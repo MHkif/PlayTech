@@ -7,22 +7,22 @@
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
-.navbar{
+.navbar {
   background: #31313168;
   backdrop-filter: satutzte(200%) blur(3px);
 }
-.nav-link{
-color: aliceblue !important;
-
+.nav-link {
+  color: aliceblue !important;
 }
-.nav-link.active{
-font-weight: bold !important;
-scale: 1.2 !important;
-/* border-bottom: 3px solid #000; */
+.nav-link.active {
+  font-weight: bold !important;
+  scale: 1.2 !important;
+  /* border-bottom: 3px solid #000; */
 }
 body {
   overflow-x: hidden;
   /* background: linear-gradient(to top, #dfe9f3 0%, white 100%); */
+  width: 100%;
 }
 
 ul {
@@ -43,14 +43,15 @@ a {
     rgb(43, 1, 91) 13.4%,
     rgb(122, 2, 54) 100.2%
   );
-
 }
+
 .hero header .logo h2 a {
   display: block;
   font-size: 24px;
   font-weight: 600;
   text-decoration: none;
   color: white;
+  justify-content: right;
 }
 .logo {
   display: flex;
@@ -62,16 +63,11 @@ a {
   width: 50px;
 }
 
-
-
-
-
-
 .content {
   padding: 20px 50px;
   height: 100vh;
   display: flex;
-  /* justify-content: space-between; */
+
   align-items: center;
 }
 
@@ -135,10 +131,7 @@ a {
   border: 1px solid #f5dca8;
   color: white;
   background: transparent;
-
 }
-
-
 
 .content .main-text a.cta:hover {
   color: black;
@@ -217,21 +210,18 @@ a {
   opacity: 1;
 }
 
-.FOOTER{
+.FOOTER {
   background: linear-gradient(
     109.6deg,
     rgb(43, 1, 91) 13.4%,
     rgb(122, 2, 54) 100.2%
-  ) !important
-
- 
+  ) !important;
 }
 .footer {
   border-top-left-radius: 125px;
 }
 /* =========  RESPONSIVE ======== */
 @media (max-width: 700px) {
-
   .content {
     /* display: flex; */
     flex-direction: column-reverse;
@@ -274,10 +264,10 @@ a {
     font-size: 12px;
   }
 }
-#cate{ 
+#cate {
   text-decoration: none;
 }
-.shadow:hover{
-  box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(60, 55, 76), 0 0 50px rgb(4, 20, 83) !important;  
-
+.shadow:hover {
+  box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(60, 55, 76),
+    0 0 50px rgb(4, 20, 83) !important;
 }
