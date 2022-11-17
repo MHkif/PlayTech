@@ -226,9 +226,9 @@ a {
 
  
 }
-.footer {
+/* .footer {
   border-top-left-radius: 125px;
-}
+} */
 /* =========  RESPONSIVE ======== */
 @media (max-width: 700px) {
 
@@ -278,6 +278,13 @@ a {
   text-decoration: none;
 }
 .shadow:hover{
-  box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(60, 55, 76), 0 0 50px rgb(4, 20, 83) !important;  
+  box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(60, 55, 76), 0 0 50px rgb(4, 20, 83)  !important;  
 
 }
+.card-title{
+    text-overflow: ellipsis;
+    
+    width: 200px;
+ 
+} 
+
