@@ -1,4 +1,29 @@
 
+<?php
+
+if(isset($_POST['submit'])){
+
+ $email =  $_POST["email"];
+ $password = $_POST["password"];
+
+ $connect = mysqli_connect('localhost','root', '', 'playtech');
+  
+
+  if($connect) {
+    echo "We are Connected";
+  } else {
+    die("Database connection failed");
+  }
+  // Insertion
+  $query = "SELECT * FROM admin";
+  $result =  mysqli_query($connect, $query);
+  
+  if(!$result){
+    die("Query Failed".mysqli_error());
+  }
+ 
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +63,9 @@
       height: 100vh;
       align-items:center;
       background-color: hsl(218, 41%, 15%);
-      background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+      /* background: linear-gradient(to top, #dfe9f3 0%, white 100%); */
+      background : #2d2d2d
+      backdrop-filter : blur(28px);
       /* background-image: radial-gradient(650px circle at 0% 0%,
           hsl(218, 41%, 35%) 15%,
           hsl(218, 41%, 30%) 35%,
@@ -82,8 +109,8 @@
     <div class="row gx-lg-5 align-items-center mb-5">
       <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
         <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-          The best offer <br />
-          <span style="color: hsl(218, 81%, 75%)">for your business</span>
+          PlayTech <br />
+          <span style="color: hsl(218, 81%, 75%)">Gamming Store</span>
         </h1>
         <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -91,6 +118,7 @@
           dolorum consequatur nulla, neque debitis eos reprehenderit quasi
           ab ipsum nisi dolorem modi. Quos?
         </p>
+        
       </div>
 
       <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
@@ -99,32 +127,17 @@
 
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
-            <form>
-              <!-- 2 column grid layout with text inputs for the first and last names -->
-              <!-- <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <input type="text" id="form3Example1" class="form-control" />
-                    <label class="form-label" for="form3Example1">First name</label>
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <input type="text" id="form3Example2" class="form-control" />
-                    <label class="form-label" for="form3Example2">Last name</label>
-                  </div>
-                </div>
-              </div> -->
+            <form action="login.php" method="post">
 
               <!-- Email input -->
               <div class="form-outline mb-4">
-                <input type="email" id="form3Example3" class="form-control" />
+                <input type="email" name="email" id="form3Example3" class="form-control" />
                 <label class="form-label" for="form3Example3">Email address</label>
               </div>
 
               <!-- Password input -->
               <div class="form-outline mb-4">
-                <input type="password" id="form3Example4" class="form-control" />
+                <input type="password"  name="password" id="form3Example4" class="form-control" />
                 <label class="form-label" for="form3Example4">Password</label>
               </div>
 
@@ -138,9 +151,7 @@
 
               <!-- Submit button -->
               <div class="container text-center ">
-              <button type="submit" class="btn btn-primary btn-block mb-4" >
-                Login
-              </button>
+              <input type="submit" name="submit" value="Login" class="btn btn-primary btn-block mb-4" >
               </div>
        
 
