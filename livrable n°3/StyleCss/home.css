@@ -217,9 +217,9 @@ a {
     rgb(122, 2, 54) 100.2%
   ) !important;
 }
-.footer {
+/* .footer {
   border-top-left-radius: 125px;
-}
+} */
 /* =========  RESPONSIVE ======== */
 @media (max-width: 700px) {
   .content {
@@ -267,7 +267,21 @@ a {
 #cate {
   text-decoration: none;
 }
+<<<<<<< HEAD:StyleCss/home.css
 .shadow:hover {
   box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(60, 55, 76),
     0 0 50px rgb(4, 20, 83) !important;
 }
+=======
+.shadow:hover{
+  box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(60, 55, 76), 0 0 50px rgb(4, 20, 83)  !important;  
+
+}
+.card-title{
+    text-overflow: ellipsis;
+    
+    width: 200px;
+ 
+} 
+
+>>>>>>> 1e514268dd9bc5b973cf56eb053f1be23219a23b:livrable n°3/StyleCss/home.css
