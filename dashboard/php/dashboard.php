@@ -126,7 +126,7 @@
         </nav> -->
        
       <div>
-      <?php include("home.php")?>
+      <?php include("addProd.php")?>
       </div>
       </div>
     </div>
