@@ -7,16 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="../../livrable n°3/StyleCss/home.css" />
+  <link rel="stylesheet" href="./../StyleCss/home.css" />
 
   <!-- SCSS -->
-  <link rel="stylesheet" href="../../livrable n°3/css/homeScss.css" />
+  <link rel="stylesheet" href="./../css/homeScss.css" />
   <!-- RESPONSIVE -->
   <!-- <link rel="stylesheet" href="../responsive/home.css" /> -->
 
   <!-- Bootstrap Links -->
-  <link rel="stylesheet" href="../../livrable n°3/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="../../livrable n°3/css/all.min.css" />
+  <link rel="stylesheet" href="./../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./../css/all.min.css" />
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <!-- Remix icons -->
@@ -48,16 +48,16 @@
 
               </li>
               <li>
-                <a href=".gallery.php" class="nav-link mx-4">Gallery</a>
+                <a href="./gallery.php" class="nav-link mx-4">Gallery</a>
               </li>
               <li>
-                <a href="dashboard.php" class="nav-link mx-4">Dashboard</a>
+                <a href="./dashboard.php" class="nav-link mx-4">Dashboard</a>
               </li>
               <li>
-                <a href="#" class="nav-link  mx-4">Contact us</a>
+                <a href="./contact.php" class="nav-link  mx-4">Contact us</a>
               </li>
 
-              <button class="btn btn-primary">Login</button>
+              <a href="./login.php"><button class="btn btn-primary" style=" background-color: #000; border:none;" >Logout</button></a>
 
             </ul>
           </div>
@@ -278,7 +278,227 @@
       </article>
 
     </div>
-  </section>c
+  </section>
+  <section
+    class="footer justify-content-center  "
+    style="background: linear-gradient(
+    110.6deg,
+    rgb(156, 116, 129) -18.3%,
+    rgb(67, 54, 74) 16.4%,
+    rgb(47, 48, 67) 68.2%,
+    rgb(27, 23, 36) 99.1%
+  ) !important;"
+    id="FOOTER"
+
+  >
+    <hr />
+    <div class="container d-none d-md-block">
+      <div class="row justify-content-between pb-4">
+        <div class="col-md-4">
+          <div class="">
+            <h4 class="mt-5 mb-3 fw-semibold text-white">Contact</h4>
+            <p class="text-decoration-none" style="color: rgb(219, 219, 219)">
+              <strong class="d-inline-block" style="color: #c0bfbf"
+                >Address &nbsp; &nbsp;:</strong
+              >
+              &nbsp; Youcode Safi , Avenue Zraktouni Safi, Morocco
+            </p>
+            <p class="text-decoration-none" style="color: rgb(219, 219, 219)">
+              <strong class="d-inline-block" style="color: #adadad"
+                >Phone&nbsp; &nbsp;:</strong
+              >
+              &nbsp; 0670018116
+            </p>
+            <p class="text-decoration-none" style="color: rgb(219, 219, 219)">
+              <strong class="d-inline-block" style="color: #c0bfbf"
+                >Working hours&nbsp; &nbsp; :</strong
+              >&nbsp; 10:00 - 18:00, Mon - Sat
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h5 class="mt-5 mb-3 fw-semibold text-white">Categories</h5>
+          <ul class="card-footer list-unstyled">
+            <li>
+              <a
+                class="text-decoration-none"
+                style="color: rgb(219, 219, 219)"
+                href="#"
+              >
+                <span>Accessories</span>
+              </a>
+            </li>
+         
+            <li>
+              <a
+                class="text-decoration-none"
+                style="color: rgb(219, 219, 219)"
+                href="#"
+              >
+                <span>Desktop</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-decoration-none"
+                style="color: rgb(219, 219, 219)"
+                href="#"
+              >
+                <span>Laptop</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-decoration-none"
+                style="color: rgb(219, 219, 219)"
+                href="#"
+              >
+                <span>Consoles</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5 class="mt-5 mb-3 fw-semibold text-white">Information</h5>
+          <ul class="card-footer list-unstyled">
+            <li>
+              <a
+                class="text-decoration-none"
+                style="color: rgb(219, 219, 219)"
+                href="#"
+              >
+                <span>Contact Us</span>
+              </a>
+            </li>
+           
+            <li>
+              <a
+                class="text-decoration-none"
+                style="color: rgb(219, 219, 219)"
+                href="#"
+              >
+                <span>Terms &amp; Conditions</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-decoration-none"
+                style="color: rgb(219, 219, 219)"
+                href="#"
+              >
+                <span>Returns &amp; Exchanges</span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-decoration-none"
+                style="color: rgb(219, 219, 219)"
+                href="#"
+              >
+                <span>Privacy Policy</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container p-4 d-none d-md-block">
+      <!-- Section: Images -->
+      <section class="">
+        <div class="row justify-content-center">
+          <div class="col-10 col-md-2 mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+              <img
+                src="./../assets/imgs/img1.jpg"
+                class="w-100 h-100"
+              />
+              <a href="#!">
+                <div
+                  class="mask"
+                  style="background-color: rgba(251, 251, 251, 0.016);"
+                ></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-10 col-md-2 mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+              <img
+                src="./../assets/imgs/imgbg 2.jpg"
+                class="w-100  h-100"
+              />
+            
+            </div>
+          </div>
+          <div class="col-10 col-md-2 mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+              <img
+                src="./../assets/imgs/imgbg 3.jpg"
+                class="w-100  h-100"
+              />
+          
+            </div>
+          </div>
+          <div class="col-10 col-md-2 mb-4 mb-md-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+              <img
+                src="./../assets/imgs/imgbg 4.jpg"
+                class="w-100  h-100"
+              />
+
+            </div>
+          </div>
+        </div>
+      </section>
+   
+    </div>
+    <section class="mb-4 text-center ">
+      <!-- Facebook -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-facebook-f" style="color: rgb(26, 25, 25);"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-twitter"style="color: rgb(26, 25, 25);"></i
+      ></a>
+
+      <!-- Google -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-google "style="color: rgb(26, 25, 25);"></i
+      ></a>
+    </section>
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+    </div>
+
+  </section>
 
   <!-- JS SCRIPTS -->
   <!-- <script src="../ScriptJs/main.js"></script> -->

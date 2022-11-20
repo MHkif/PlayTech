@@ -1,170 +1,120 @@
-
 <?php
+$host="localhost";
+$user="root";
+$password="";
+$db="play_tech";
+$msg=false;
 
-if(isset($_POST['submit'])){
-
- $email =  $_POST["email"];
- $password = $_POST["password"];
-
- $connect = mysqli_connect('localhost','root', '', 'playtech');
-  
-
-  if($connect) {
-    echo "We are Connected";
-  } else {
-    die("Database connection failed");
-  }
-  // Insertion
-  $query = "SELECT * FROM admin";
-  $result =  mysqli_query($connect, $query);
-  
-  if(!$result){
-    die("Query Failed".mysqli_error());
-  }
- 
+// Create connection
+$data=mysqli_connect($host,$user,$password,$db);
+// Check connection
+if($data===false)
+{   
+    echo("connection error");
 }
-?>
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+    $user_email=$_POST["email"];
+    $password=$_POST["password"];
+    $sql="select * from personne where email='".$user_email."' AND password='".$password."' ";
+    $resul=mysqli_query($data,$sql);
+    $row=mysqli_fetch_array($resul);
 
+   if($row!=null)
+    {
+    header("location:home.php");
+   }
+    else
+   {
+      $msg=true;
+    
+   }
+}?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="utf-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <meta name="description" content="">
- <meta name="author" content="">
- <!-- CSS -->
- <!-- <link rel="stylesheet" href="../StyleCss/home.css" /> -->
-
-<!-- SCSS -->
-<!-- <link rel="stylesheet" href="../css/homeScss.css" /> -->
-<!-- RESPONSIVE -->
-<!-- <link rel="stylesheet" href="../responsive/home.css" /> -->
-
-<!-- Bootstrap Links -->
-
-<link rel="stylesheet" href="../../css/bootstrap.min.css" />
-<link rel="stylesheet" href="../../css/all.min.css" />
-
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<!-- Remix icons -->
-<link
-  href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-  rel="stylesheet"
-/>
-
-<title>Play Tech</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <!-- CSS -->
+    <link rel="stylesheet" href="./../StyleCss/login.css">
+    <!-- Bootstrap Links -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Remix icons -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <title> Play Tach</title>
 </head>
-<body >
-<!-- Section: Design Block -->
-<section class="background-radial-gradient overflow-hidden">
-  <style>
-    .background-radial-gradient {
-      height: 100vh;
-      align-items:center;
-      background-color: hsl(218, 41%, 15%);
-      /* background: linear-gradient(to top, #dfe9f3 0%, white 100%); */
-      background : #2d2d2d
-      backdrop-filter : blur(28px);
-      /* background-image: radial-gradient(650px circle at 0% 0%,
-          hsl(218, 41%, 35%) 15%,
-          hsl(218, 41%, 30%) 35%,
-          hsl(218, 41%, 20%) 75%,
-          hsl(218, 41%, 19%) 80%,
-          transparent 100%), */
-        /* radial-gradient(1250px circle at 100% 100%,
-          hsl(218, 41%, 45%) 15%,
-          hsl(218, 41%, 30%) 35%,
-          hsl(218, 41%, 20%) 75%,
-          hsl(218, 41%, 19%) 80%,
-          transparent 100%); */
-    }
-
-    #radius-shape-1 {
-      height: 220px;
-      width: 220px;
-      top: -60px;
-      left: -130px;
-      background: radial-gradient(#44006b, #ad1fff);
-      overflow: hidden;
-    }
-
-    #radius-shape-2 {
-      border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
-      bottom: -60px;
-      right: -110px;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(#44006b, #ad1fff);
-      overflow: hidden;
-    }
-
-    .bg-glass {
-      background-color: hsla(0, 0%, 100%, 0.9) !important;
-      backdrop-filter: saturate(200%) blur(25px);
-    }
-  </style>
-
-  <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
-    <div class="row gx-lg-5 align-items-center mb-5">
-      <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
-        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-          PlayTech <br />
-          <span style="color: hsl(218, 81%, 75%)">Gamming Store</span>
-        </h1>
-        <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Temporibus, expedita iusto veniam atque, magni tempora mollitia
-          dolorum consequatur nulla, neque debitis eos reprehenderit quasi
-          ab ipsum nisi dolorem modi. Quos?
-        </p>
-        
-      </div>
-
-      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
-        <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
-        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
-
-        <div class="card bg-glass">
-          <div class="card-body px-4 py-5 px-md-5">
-            <form action="login.php" method="post">
-
-              <!-- Email input -->
-              <div class="form-outline mb-4">
-                <input type="email" name="email" id="form3Example3" class="form-control" />
-                <label class="form-label" for="form3Example3">Email address</label>
-              </div>
-
-              <!-- Password input -->
-              <div class="form-outline mb-4">
-                <input type="password"  name="password" id="form3Example4" class="form-control" />
-                <label class="form-label" for="form3Example4">Password</label>
-              </div>
-
-              <!-- Checkbox -->
-              <div class="form-check d-flex justify-content-center mb-4">
-                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                <label class="form-check-label" for="form2Example33">
-                  Remember me
-                </label>
-              </div>
-
-              <!-- Submit button -->
-              <div class="container text-center ">
-              <input type="submit" name="submit" value="Login" class="btn btn-primary btn-block mb-4" >
-              </div>
-       
-
-        
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+<body>
+<?php if($msg) echo '
+   <div class="container ">
+   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+  </symbol>
+  <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+  </symbol>
+  <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </symbol>
+</svg>
+<div class="alert alert-danger d-flex align-items-center p-3 " role="alert">
+  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+  <div>
+  admin not found 
   </div>
-</section>
-<!-- Section: Design Block -->
+</div></div>';?>
+    <div class="container">
+    
+    <div class="row px-3">
+ <div class="card  col-lg-10 col-xl-9 flex-row mx-auto px-0">
+            <div class="img-left d-none d-md-flex"></div>
+            <div class="card-body">
+                <h4 class="title text-center mt-4">
+                    login into account
+                </h4>
+                <form class="form-box px-3" action="#" method="POST">
+                    <!-- email -->
+                    <div class="form-input">
+                        <span class="col-2"><i class="fa fa-envelope-o" aria-hidden="true"></i> </span>
+                        <input class="col-10" type="email"name="email" placeholder="Email Address" required>
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <!-- password -->
+                    <div class="form-input mt-4 ">
+                        <span class="col-2"><i class="ri-key-2-line"></i></span>
+                        <input class="col-12 ml-0.5" type="password" name="password"  placeholder="Password"  required>
+                    </div>
+                <!-- checkbox -->
+            <div class="row justify-content-center mb-4">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="checb">
+                    <label class="custom-control-label" for="checb">Remember me</label>
+                </div>
+            </div>     
+             <!-- login button -->
+            <div class="mb-3">
+                <button type="submit" class="btn btn-block m-auto">LOGIN</button>
+            </div>
+            <!-- forget psw -->
+            <div>
+
+
+               <button  onclick="myFunction()"  class="forget-link" ><a href="#" class="text-decoration-none">Forget password</a> </button>
+            </div >
+           
+          </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function myFunction(){
+    alert("check your email")
+}</script> 
 </body>
 </html>
-
-

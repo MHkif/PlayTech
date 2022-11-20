@@ -48,13 +48,13 @@
     <div class="collapse navbar-collapse" id="toggleMobileMenu">
       <ul class="navbar-nav ms-auto text-center">
         <li>
-          <a href="./home.html" class="nav-link  mx-4">Home</a>
+          <a href="./home.php" class="nav-link  mx-4">Home</a>
         </li>
         <li>
-          <a href="./gallery.html" class="nav-link active mx-4">Gallery</a>
+          <a href="./gallery.php" class="nav-link active mx-4">Gallery</a>
         </li>
         <li>
-          <a href="#FOOTER" class="nav-link  mx-4">Contact us</a>
+          <a href="./contact.php" class="nav-link  mx-4">Contact us</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -363,10 +363,12 @@
     <section
     class="footer justify-content-center  "
     style="background: linear-gradient(
-      109.6deg,
-      rgb(43, 1, 91) 40.4%,
-      rgb(122, 2, 54) 100.2%
-    )"
+    110.6deg,
+    rgb(156, 116, 129) -18.3%,
+    rgb(67, 54, 74) 16.4%,
+    rgb(47, 48, 67) 68.2%,
+    rgb(27, 23, 36) 99.1%
+  ) !important;"
     id="FOOTER"
 
   >
@@ -492,7 +494,7 @@
               data-ripple-color="light"
             >
               <img
-                src="./../assets/imgs/ imgbg (2).jpg"
+                src="./../assets/imgs/img1.jpg"
                 class="w-100 h-100"
               />
               <a href="#!">
@@ -509,7 +511,7 @@
               data-ripple-color="light"
             >
               <img
-                src="./../assets/imgs/ imgbg (1).jpg"
+                src="./../assets/imgs/imgbg 2.jpg"
                 class="w-100  h-100"
               />
             
@@ -521,7 +523,7 @@
               data-ripple-color="light"
             >
               <img
-                src="./../assets/imgs/ imgbg (3).jpg"
+                src="./../assets/imgs/imgbg 3.jpg"
                 class="w-100  h-100"
               />
           
@@ -533,7 +535,7 @@
               data-ripple-color="light"
             >
               <img
-                src="./../assets/imgs/img1.jpg"
+                src="./../assets/imgs/imgbg 4.jpg"
                 class="w-100  h-100"
               />
 

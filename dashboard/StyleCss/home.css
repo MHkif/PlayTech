@@ -49,7 +49,7 @@ a {
     rgb(67, 54, 74) 16.4%,
     rgb(47, 48, 67) 68.2%,
     rgb(27, 23, 36) 99.1%
-  );
+  ) !important;
 }
 
 .hero header .logo h2 a {
