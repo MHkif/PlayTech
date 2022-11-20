@@ -229,7 +229,7 @@ $('.btn').click(function(){
              $(this).addClass("active").siblings().removeClass("active");
            });
   </script>
-  <script src="../../livrable n°3/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
   <script src="../../livrable n°3/js/all.min.js"></script>
 </body>
 

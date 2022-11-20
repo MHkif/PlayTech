@@ -1,3 +1,8 @@
+<?php include "../database/credentials.php"; ?>
+<?php include "../database/auth.php"; ?>
+<?php include "../database/functions.php"; ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,16 +12,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="../../livrable n°3/StyleCss/home.css" />
+  <link rel="stylesheet" href="../StyleCss/home.css" />
 
   <!-- SCSS -->
-  <link rel="stylesheet" href="../../livrable n°3/css/homeScss.css" />
+  <link rel="stylesheet" href="../css/homeScss.css" />
   <!-- RESPONSIVE -->
   <!-- <link rel="stylesheet" href="../responsive/home.css" /> -->
 
   <!-- Bootstrap Links -->
-  <link rel="stylesheet" href="../../livrable n°3/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="../../livrable n°3/css/all.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/all.min.css" />
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <!-- Remix icons -->
@@ -31,11 +36,12 @@
   <section class="hero shadow bg-black">
     <div class="main-width">
       <!-- Navbar  -->
-      <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark px-2">
         <div class="container-fluid">
           <a href="#" class="navbar-brand">
-            <img src="../../livrable n°3/assets/imgs/logo.png" alt="Logo image" width="60" class="d-inline-block" />
-            <span class=""> PlayTech </span>
+            <img src="../assets/imgs/logo.png" alt="Logo image" width="60" class="d-inline-block" />
+            <span class="">
+              PlayTech <small style="font-size: 10px;"> <?php echo $_SESSION['username']; ?></small> </span>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-label="Toggle navigation">
             <i class="ri-apps-2-line"></i>
@@ -48,7 +54,7 @@
 
               </li>
               <li>
-                <a href=".gallery.php" class="nav-link mx-4">Gallery</a>
+                <a href="gallery.php" class="nav-link mx-4">Gallery</a>
               </li>
               <li>
                 <a href="dashboard.php" class="nav-link mx-4">Dashboard</a>
@@ -57,7 +63,9 @@
                 <a href="#" class="nav-link  mx-4">Contact us</a>
               </li>
 
-              <button class="btn btn-primary">Login</button>
+              <button class="btn btn-primary" value="Logout">
+                <a href="logout.php" class="text-white text-decoration-none">Logout</a>
+              </button>
 
             </ul>
           </div>
@@ -78,7 +86,7 @@
       </div>
 
       <div class="image">
-        <img src="../../livrable n°3/assets/imgs/ps5.png" />
+        <img src="../assets/imgs/ps5.png" />
       </div>
     </div>
     </div>
@@ -91,7 +99,7 @@
         <div class="card border-0 text-center">
           <a href="" id="cate">
             <div class="card shadow rounded-4">
-              <img src="../../livrable n°3/assets/imgs/gamming_acces.jpg" class="card-img p-4" alt="..." />
+              <img src="../assets/imgs/gamming_acces.jpg" class="card-img p-4" alt="..." />
             </div>
             <div class="card-body">
               <h5 class="card-title">Accessories</h5>
@@ -105,7 +113,7 @@
         <div class="card border-0 text-center">
           <a href="" id="cate">
             <div class="card shadow rounded-4">
-              <img src="../../livrable n°3/assets/imgs/ps5-ds.jpg" class="card-img p-4" alt="..." />
+              <img src="../assets/imgs/ps5-ds.jpg" class="card-img p-4" alt="..." />
             </div>
             <div class="card-body text-center">
               <h5 class="card-title">Consoles</h5>
@@ -120,7 +128,7 @@
         <div class="card border-0 text-center">
           <a href="" id="cate">
             <div class="card shadow rounded-4">
-              <img src="../../livrable n°3/assets/imgs/lp.png" class="card-img p-4" alt="..." />
+              <img src="../assets/imgs/lp.png" class="card-img p-4" alt="..." />
             </div>
             <div class="card-body">
               <h5 class="card-title">Laptops</h5>
@@ -135,7 +143,7 @@
         <div class="card border-0 text-center">
           <a href="" id="cate">
             <div class="card shadow rounded-4">
-              <img src="../../livrable n°3/assets/imgs/phones.png" class="card-img p-4" alt="..." />
+              <img src="../assets/imgs/phones.png" class="card-img p-4" alt="..." />
             </div>
 
             <div class="card-body">
