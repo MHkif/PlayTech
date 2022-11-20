@@ -1,173 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Bootstrap Links -->
-    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../../css/all.min.css" />
-    <!-- Css -->
-   
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <!-- Remix icons -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
-    
-    <title>PlayTech Dashboard</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../StyleCss/gallery.css" />
+  <!-- Bootstrap Links -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/all.min.css" />
+  <!-- Css -->
+
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <!-- Remix icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/dashboard.css">
+
+  <title>PlayTech Dashboard</title>
 
 </head>
-<body>
-    <div class="main-container d-flex">
-      <div class="sidebar" id="side_nav">
-        <div class="header-box px-3 pt-3 pb-4 d-flex justify-content-between">
-          <h1 class="fs-5">
-            <span class="bg-white text-dark rounded shadow px-2">P</span>
-            <span class="text-white">layTech</span>
-          </h1>
-          <button class="btn-close btn-close-white close-btn d-block d-md-none"></button>
-          <!-- <button class="btn-close btn-close-white close-btn"></button> -->
-        
-        </div>
 
-        <ul class="nav nav-pills flex-column mb-auto">
-          <li class="mx-3 my-1 active">
-            <a
-              href="#"
-              class="nav-link d-flex align-items-center gap-2"
-              aria-current="page"
-            >
-              <i class="ri-home-5-line fs-5"></i>
-              Home
-            </a>
-          </li>
-          <li class="mx-3 my-1">
-            <a
-              href="#"
-              class="nav-link text-white d-flex align-items-center gap-2"
-              aria-current="page"
-            >
-              <i class="ri-dashboard-line fs-5"></i>
-              Dashboard
-            </a>
-          </li>
-          <li class="mx-3 my-1">
-            <a
-              href="#"
-              class="nav-link text-white d-flex align-items-center gap-2"
-              aria-current="page"
-            >
-              <i class="ri-bar-chart-2-line fs-5"></i>
-              Statistique
-            </a>
-          </li>
-          <li class="mx-3 my-1">
-            <a
-              href="#"
-              class="nav-link text-white d-flex align-items-center gap-2"
-              aria-current="page"
-            >
-              <i class="ri-layout-grid-fill fs-5"></i>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg bg-light text-dark">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">
+        <img src="../assets/imgs/logo.png" alt="Logo image" width="60" class="d-inline-block" />
+        <span class=""> Dashboard </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3 ">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Products
             </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="addProd.php">New Product</a></li>
+              <li><a class="dropdown-item" href="updateProd.php">Update Product</a></li>
+            </ul>
           </li>
         </ul>
-
-        <ul class="nav nav-pills flex-column mb-auto">
-          <li class="mx-3 my-1">
-            <a
-              href="#"
-              class="nav-link text-white d-flex align-items-center gap-2"
-            >
-              <i class="ri-login-box-line fs-5"></i>
-              Log out
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="content">
-        <!-- <nav class="navbar navbar-expend-lg navbar-light bg-light">
-          <div class="container-fluid">
-            <div class="d-flex justify-content-between">
-              <a href="#" class="navbar-brand"> PlayTech </a>
-              <button class="btn px-1 py-0 open-btn">
-                <i class="ri-menu-2-line"></i>
-              </button>
-            </div>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSuppotedContent"
-              aria-controls="navbarSuppotedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div
-              class="collapse navbar-collapse justify-content-end"
-              id="navbarSuppotedContent"
-            >
-              <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a href="#" class="nav-link active" aria-current="page"
-                    >Profile</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav> -->
-       
-      <div>
-      <?php include("addProd.php")?>
-      </div>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-dark" type="submit">Search</button>
+        </form>
       </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </nav>
 
-    <script>
-      $(".sidebar ul li").on("click", function () {
-        $(".sidebar ul li.active").removeClass("active");
-        $(this).addClass("active");
-      });
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-      $(".open-btn").on("click", function () {
-        $(".sidebar").addClass("active");
-      });
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/all.min.js"></script>
 
-      $(".close-btn").on("click", function () {
-        $(".sidebar").removeClass("active");
-      });
-    </script>
-    <!-- JS SCRIPTS -->
-    <!-- <script src="../ScriptJs/main.js"></script> -->
-    <script src="../../js/bootstrap.bundle.min.js"></script>
-    <script src="../../js/all.min.js"></script>
 
-    <!-- <script>
-      // MenuToggle
-      let toggle = document.querySelector(".toggle");
-      let navigation = document.querySelector(".navigation");
-      let main = document.querySelector(".main");
-      toggle.onclick = function () {
-        navigation.classList.toggle("active");
-      };
+</body>
 
-      // hover selected class
-      let list = document.querySelectorAll(".navigation li");
-      function activeLink() {
-        list.forEach((item) => item.classList.remove("hovered"));
-        this.classList.add("hovered");
-      }
-
-      //   list.foreach((item) => item.addEventListener("mouseover", activeLink));
-    </script> -->
-  </body>
 </html>

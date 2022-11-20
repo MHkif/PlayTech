@@ -43,16 +43,18 @@
           <div class="collapse navbar-collapse" id="toggleMobileMenu">
             <ul class="navbar-nav ms-auto text-center">
               <li>
-                <a href="../home.html" class="nav-link  active  mx-4">Home</a>
+                <a href="home.php" class="nav-link  active  mx-4">
+                  Home</a>
+
               </li>
               <li>
-                <a href="../gallery.html" class="nav-link mx-4">Gallery</a>
+                <a href=".gallery.php" class="nav-link mx-4">Gallery</a>
               </li>
               <li>
-                <a href="addProd.php" class="nav-link mx-4">Dashboard</a>
+                <a href="dashboard.php" class="nav-link mx-4">Dashboard</a>
               </li>
               <li>
-                <a href="#FOOTER" class="nav-link  mx-4">Contact us</a>
+                <a href="#" class="nav-link  mx-4">Contact us</a>
               </li>
 
               <button class="btn btn-primary">Login</button>
