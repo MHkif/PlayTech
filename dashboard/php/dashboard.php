@@ -1,3 +1,13 @@
+<?php
+include'./connect.php';
+$sql="Select*from `categories`";
+$result=mysqli_query($data,$sql);
+if($result){
+$row=mysqli_fetch_assoc($result);
+echo $row['categorie'];
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

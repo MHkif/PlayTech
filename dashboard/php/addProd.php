@@ -23,7 +23,6 @@
       rel="stylesheet"
     />
 
-  <!-- <link href=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" rel="stylesheet" /> -->
 
   <link rel="stylesheet"  href="../StyleCss/gallery.css" />
 <!-- 
@@ -43,8 +42,7 @@
   </nav>
 
         <div class="container py-2">
-
-          <div class="row my-1 g-5">
+           <div class="row my-1 g-5">
             <!-- Product Name  -->
             <div class="col">
               <div class="mb-3">
