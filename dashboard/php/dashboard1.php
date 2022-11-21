@@ -63,46 +63,49 @@
                    require_once "connect.php";
                     
                     /* select query execution */
-                    $sql = "SELECT * FROM produits";
-                    $res=$data->query($sql);
-                    
-                        if($res->rowCount() > 0){
-                           
-                            echo '<table class="table table-bordered table-striped">';
-                                echo "<thead>";
-                                    echo "<tr>";
-                                        echo "<th>#</th>";
-                                        echo "<th>title</th>";
-                                        echo "<th>prix</th>";
-                                        echo "<th>quantite</th>";
-                                        echo "<th>id_cat</th>";
-                                    echo "</tr>";
-                                echo "</thead>";
-                                echo "<tbody>";
-                                    $row=$res->fetchALL();
-                                    foreach($row as $key){
-                                    echo "<tr>";
-                                        echo "<td>" . $key['id_prod'] . "</td>";
-                                        echo "<td>" . $key['title'] . "</td>";
-                                        echo "<td>" . $key['prix'] . "</td>";
-                                        echo "<td>" . $key['quantite'] . "</td>";
-                                        echo "<td>" . $key['id_cat'] . "</td>";
-                                        echo "<td>";
-                                            echo '<a href="update.php?id='. $key['id_prod'] .'" class="me-3" ><span class="bi bi-pencil"></span></a>';
-                                            echo '<a href="delete.php?id='. $key['id_prod'] .'" ><span class="bi bi-trash"></span></a>';
-                                        echo "</td>";
-                                    echo "</tr>";
-                                }
-                                echo "</tbody>";                            
-                            echo "</table>";                            
-                        } else{
+                    $sql    = "SELECT * FROM produits";
+                    $statement  = $data->query($sql);
+                    if($statement != false){
+                        $resultData = $statement->fetchAll();
+                        if(count($resultData) <= 0 || $resultData == false) {
                             echo '<div class="alert alert-danger"><em>Pas d\'enregistrement</em></div>';
+
+                        }else{
+
+                            echo '<table class="table table-bordered table-striped">';
+                            echo "<thead>";
+                                echo "<tr>";
+                                    echo "<th>#</th>";
+                                    echo "<th>title</th>";
+                                    echo "<th>prix</th>";
+                                    echo "<th>quantite</th>";
+                                    echo "<th>id_cat</th>";
+                                echo "</tr>";
+                            echo "</thead>";
+                            echo "<tbody>";
+                                foreach($resultData as $row){
+                                echo "<tr>";
+                                    echo "<td>" . $row['id_prod'] . "</td>";
+                                    echo "<td>" . $row['title'] . "</td>";
+                                    echo "<td>" . $row['prix'] . "</td>";
+                                    echo "<td>" . $row['quantite'] . "</td>";
+                                    echo "<td>" . $row['id_cat'] . "</td>";
+                                    echo "<td>";
+                                        echo '<a href="update.php?id='. $row['id_prod'] .'" class="me-3" ><span class="bi bi-pencil"></span></a>';
+                                        echo '<a href="delete.php?id='. $row['id_prod'] .'" ><span class="bi bi-trash"></span></a>';
+                                    echo "</td>";
+                                echo "</tr>";
+                            }
+                            echo "</tbody>";                            
+                        echo "</table>"; 
                         }
-                   
+
+                    }
+                    
                     
                     ?>
                 </div>
-            </div>        
+            </div>    
         </div>
     </div>
 </body>
