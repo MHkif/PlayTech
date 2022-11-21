@@ -42,7 +42,6 @@ if (isset($_POST['sub'])) {
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="mt-5">ajouter un produit</h2>
-                    <p>Remplir leS CHAMPS </p>
 
                     <form action="" method="post">
                         <div class="form-group">
@@ -59,7 +58,7 @@ if (isset($_POST['sub'])) {
                             <input type="number" name="quantite" class="form-control">
 
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mt-2">
                             <select name="id_cat" id="">
                                 <?php
                                 $sql1 = "SELECT * FROM `categories`";
@@ -79,13 +78,8 @@ if (isset($_POST['sub'])) {
 
                             </select>
                         </div>
-
-                        <!-- <div class="form-group">
-                            <label>id categorie</label>
-                            <input type="number" name="id_cat" class="form-control">
-                        </div> -->
-                        <input type="submit" class="btn btn-primary" name="sub" value="Enregistrer">
-                        <a href="dashboard1.php" class="btn btn-secondary ml-2">Annuler</a>
+                        <input type="submit" class="btn btn-primary mt-2" name="sub" value="Enregistrer">
+                        <a href="dashboard1.php" class="btn btn-secondary ml-2 mt-2">Annuler</a>
                     </form>
 
                 </div>

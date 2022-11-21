@@ -12,9 +12,8 @@ if(isset($_POST['sub'])){
         $id_cat = $_POST['id_cat'];
 
 $sql2 = "UPDATE `produits` SET `title`='$title',`prix`='$prix',`quantite`='$qte',`id_cat`='$id_cat'   WHERE `produits`.`id_prod` = $id";
-// $sql = "INSERT INTO `produit` (`id`, `nom`, `qte`, `prix`, `id_cat`) VALUES (NULL, '$name', '$qte', '$prix', '$cat');";
 $resultat2 = $data->prepare($sql2);
-$resultat2->execute() or die("Erreur lors de l'execution de la requete: " . mysql_error());
+$resultat2->execute() ;
 header("Location: ./dashboard1.php");
 }?>
 
@@ -44,7 +43,6 @@ header("Location: ./dashboard1.php");
                         <div class="row">
                                 <div class="col-md-12">
                                         <h2 class="mt-5">modifier un produit</h2>
-                                        <p>Remplir leS CHAMPS </p>
 
                                         <form action="" method="post">
                                                 <div class="form-group">
@@ -61,7 +59,7 @@ header("Location: ./dashboard1.php");
                                                         <input type="number" name="quantite" class="form-control" value="<?php echo $row[0]['quantite'] ?>">
 
                                                 </div>
-                                                <div class="form-group">
+                                                <div class="form-group mt-2">
                                                         <select name="id_cat" id="">
                                                                 <?php
                                                                 $sql1 = "SELECT * FROM `categories`";
@@ -86,13 +84,8 @@ header("Location: ./dashboard1.php");
 
                                                         </select>
                                                 </div>
-
-                                                <!-- <div class="form-group">
-                            <label>id categorie</label>
-                            <input type="number" name="id_cat" class="form-control">
-                        </div> -->
-                                                <input type="submit" class="btn btn-primary" name="sub" value="Enregistrer">
-                                                <a href="dashboard1.php" class="btn btn-secondary ml-2">Annuler</a>
+                                                <input type="submit" class="btn btn-primary mt-2" name="sub" value="Enregistrer">
+                                                <a href="dashboard1.php" class="btn btn-secondary mt-2 ml-2">Annuler</a>
                                         </form>
 
                                 </div>
