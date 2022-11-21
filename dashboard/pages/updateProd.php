@@ -39,8 +39,9 @@ include('pserver.php');
 <body>
 <nav class="navbar navbar-expand-lg bg-light text-dark">
 <div class="container-fluid navbar-brand">
-      <a href="#" class="navbar-brand">
-      <i class="ri-arrow-left-line text-black"></i>
+      <a href="#" class="navbar-brand" onClick="history.go(-1);">
+      <i class="ri-arrow-left-line text-black" ></i>
+      
       </a>
       <span class=""> Update Product </span>
     </div>
