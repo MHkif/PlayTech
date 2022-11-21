@@ -12,28 +12,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- CSS -->
-<<<<<<< HEAD:dashboard/pages/home.php
   <link rel="stylesheet" href="../StyleCss/home.css" />
 
   <!-- SCSS -->
   <link rel="stylesheet" href="../css/homeScss.css" />
-=======
-  <link rel="stylesheet" href="./../StyleCss/home.css" />
-
-  <!-- SCSS -->
-  <link rel="stylesheet" href="./../css/homeScss.css" />
->>>>>>> 726a5df0466b89137105ecd93f805e13fad174eb:dashboard/php/home.php
   <!-- RESPONSIVE -->
   <!-- <link rel="stylesheet" href="../responsive/home.css" /> -->
 
   <!-- Bootstrap Links -->
-<<<<<<< HEAD:dashboard/pages/home.php
   <link rel="stylesheet" href="../css/bootstrap.min.css" />
   <link rel="stylesheet" href="../css/all.min.css" />
-=======
-  <link rel="stylesheet" href="./../css/bootstrap.min.css" />
-  <link rel="stylesheet" href="./../css/all.min.css" />
->>>>>>> 726a5df0466b89137105ecd93f805e13fad174eb:dashboard/php/home.php
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <!-- Remix icons -->
@@ -53,7 +41,14 @@
           <a href="#" class="navbar-brand">
             <img src="../assets/imgs/logo.png" alt="Logo image" width="60" class="d-inline-block" />
             <span class="">
-              PlayTech <small style="font-size: 10px;"> <?php echo $_SESSION['username']; ?></small> </span>
+              PlayTech 
+              
+              <small style="font-size: 10px;"> 
+              <?php 
+              if($_SESSION["username"] ){
+                echo $_SESSION['username']; 
+              }
+                ?></small> </span>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-label="Toggle navigation">
             <i class="ri-apps-2-line"></i>
@@ -66,11 +61,7 @@
 
               </li>
               <li>
-<<<<<<< HEAD:dashboard/pages/home.php
                 <a href="gallery.php" class="nav-link mx-4">Gallery</a>
-=======
-                <a href="./gallery.php" class="nav-link mx-4">Gallery</a>
->>>>>>> 726a5df0466b89137105ecd93f805e13fad174eb:dashboard/php/home.php
               </li>
               <li>
                 <a href="./dashboard.php" class="nav-link mx-4">Dashboard</a>
@@ -79,13 +70,9 @@
                 <a href="./contact.php" class="nav-link  mx-4">Contact us</a>
               </li>
 
-<<<<<<< HEAD:dashboard/pages/home.php
               <button class="btn btn-primary" value="Logout">
                 <a href="logout.php" class="text-white text-decoration-none">Logout</a>
               </button>
-=======
-              <a href="./login.php"><button class="btn btn-primary" style=" background-color: #000; border:none;" >Logout</button></a>
->>>>>>> 726a5df0466b89137105ecd93f805e13fad174eb:dashboard/php/home.php
 
             </ul>
           </div>
