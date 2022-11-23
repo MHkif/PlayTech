@@ -6,9 +6,7 @@
 <?php
 
 if (!isset($_SESSION['email'])) {
-    header("Location: ../pages/loginTest.php");
-} else {
-}
-
+    header("Location: ../pages/login.php");
+} 
 
 ?>

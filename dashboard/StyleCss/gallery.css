@@ -1,172 +1,89 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;600&family=Poppins:wght@500;600&family=Roboto:wght@100;300;500;700&family=Ubuntu:wght@300;500&display=swap");
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "Poppins", sans-serif;
+#makeSize{
+height: 300px;
 }
-.navbar{
+.navbar {
   background: #31313168;
-  backdrop-filter: satutzte(200%) blur(3px);
+  backdrop-filter: blur(3px);
 }
-.nav-link{
-color: aliceblue !important;
-
+.nav-link {
+  color: aliceblue !important;
 }
-.nav-link.active{
-font-weight: bold !important;
-scale: 1.2 !important;
-/* border-bottom: 3px solid #000; */
+.nav-link.active {
+  font-weight: bold !important;
+  scale: 1.2 !important;
+  /* border-bottom: 3px solid #000; */
 }
 
-
-.navbar-toggler{
+.navbar-toggler {
   border: none !important;
 }
 
-.carousel-item{
+.carousel-item {
   height: 80vh;
   min-height: 300px;
 }
 
-.carousel-caption{
+.carousel-caption {
   bottom: 220px;
 }
 
-.carousel-caption h5{
+.carousel-caption h5 {
   width: 60%;
   margin: auto;
   font-size: 41px;
   line-height: 8.9;
-  font-family: 'Neuropol X Free', sans-serif;
+  font-family: "Neuropol X Free", sans-serif;
 }
-.carousel-caption a{
+.carousel-caption a {
   text-transform: uppercase;
   text-decoration: none;
   background: darkorange;
   padding: 10px 30px;
   display: inline-block;
-  color: #000; 
+  color: #000;
 }
 /* .footer {
   border-top-left-radius: 125px;
 } */
 
-#card:hover{
-    box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 15px rgb(15, 12, 15), 0 0 10px rgb(83, 4, 73) !important;
-}
-#img{
-  opacity: 0;
-  transition-duration: 0.75s;
-}
-#imgp{
-  background-image: url(./../assets/accessories/2.png);
-  background-size: cover;
-}
-#imgp:hover{
-  background:none;
-}
-#img:hover{
-  opacity: 1;
-  transition-duration: 2s;
- 
-}
-#imgp1{
-  background-image: url(./../assets/accessories/3.png);
-  background-size: cover;
-}
-#imgp1:hover{
-  background:none;
-}
-#imgp2{
-  background-image: url(./../assets/accessories/7.png);
-  background-size: cover;
-}
-#imgp2:hover{
-  background:none;
-}
-#imgp3{
-  background-image: url(./../assets/accessories/10.png);
-  background-size: cover;
-}
-#imgp3:hover{
-  background:none;
-}
-#imgp4{
-  background-image: url(./../assets/laptop/atlas-gaming-asus-rog-strix-g17-b-removebg-preview.png);
-  background-size: cover;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-#imgp4:hover{
-  background:none;
-}
-#imgp5{
-  background-image: url(./../assets/laptop/atlas-gaming-msi-gf65-a-1-removebg-preview.png);
-  background-size: cover;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-#imgp5:hover{
-  background:none;
-}
-#imgp6{
-  background-image: url(./../assets/laptop/easy-gaming-acer-nitro-5-1-removebg-preview.png);
-  background-size: cover;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-#imgp6:hover{
-  background:none;
-}
-#imgp7{
-  background-image: url(./../assets/disktop/2.png);
-  background-size: cover;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-#imgp7:hover{
-  background:none;
-}
-#imgp8{
-  background-image: url(./../assets/disktop/4.png);
-  background-size: cover;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-#imgp8:hover{
-  background:none;
+#card:hover {
+  box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 5px rgba(15, 12, 15, 0.292),
+    0 0 6px rgba(83, 4, 72, 0.495) !important;
 }
 
-.card-img-tiles {
+/* .card-img-tiles {
   display: block;
   border-bottom: 1px solid #e1e7ec;
-}
+} */
 
 a {
   color: #0da9ef;
   text-decoration: none !important;
 }
 
-.card-img-tiles>.inner {
+/* .card-img-tiles > .inner {
   display: table;
   width: 100%;
-}
+} */
 
-.card-img-tiles .main-img, .card-img-tiles .thumblist {
+/* .card-img-tiles .main-img,
+.card-img-tiles .thumblist {
   display: table-cell;
   width: 65%;
   padding: 15px;
-  vertical-align: middle;
+  vertical-align: middle; */
   /* border: 1px dotted #bdbfc0 !important; */
-}
+/* } */
 
-.card-img-tiles .main-img>img:last-child, .card-img-tiles .thumblist>img:last-child {
+/* .card-img-tiles .main-img > img:last-child,
+.card-img-tiles .thumblist > img:last-child {
   margin-bottom: 0;
-}
+} */
 
-.card-img-tiles .main-img>img, .card-img-tiles .thumblist>img {
+/* .card-img-tiles .main-img > img,
+.card-img-tiles .thumblist > img {
   display: block;
   width: 100%;
   margin-bottom: 6px;
@@ -180,46 +97,24 @@ a {
   width: 65%;
   padding: 15px;
   vertical-align: middle;
-}
+} */
 
-
-
-.card-img-tiles .thumblist>img {
+/* .card-img-tiles .thumblist > img {
   display: block;
   width: 100%;
   margin-bottom: 6px;
 }
-.btn-group-sm>.btn, .btn-sm {
-  padding: .45rem .5rem !important;
-  font-size: .875rem;
+.btn-group-sm > .btn,
+.btn-sm {
+  padding: 0.45rem 0.5rem !important;
+  font-size: 0.875rem;
   line-height: 1.5;
-  border-radius: .2rem;
-}
+  border-radius: 0.2rem;
+} */
 
-
-h1 {
+/* h1, h4{
   color: hsl(0, 0%, 0%);
   font-family: monospace;
   font-size: 30px !important;
-}
-
-/* h1 {
-  background: linear-gradient(to right, hsl(0, 0%, 0%) 0, hsl(300, 7%, 94%) 10%, hsl(0, 0%, 30%) 20%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 3s infinite linear;
 } */
-
-@keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 600px;
-  }
-  100% {
-    background-position: 600px;
-  }
-}
-
 

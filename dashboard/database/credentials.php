@@ -1,14 +1,18 @@
-<?php
 
-$db_host = "localhost";
-$db_user = "root";
-$db_pass= "";
-$db_name = "playtech";
+  <?php
+  $host = "localhost";
+  $user = "root";
+  $password = "";
+  $db = "play_tech";
+  $msg = false;
 
-
-
-$connection = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
-
-if ($connection ->connect_error) {
-    die("Connection failed: " . $connection->connect_error);
+  $dsn = "mysql:host=" . $host . "; dbname=" . $db;
+  try {
+    $data = new PDO($dsn, $user, $password);
+  } catch (Exception $e) {
+    die('Erreur : ' . $e->getMessage());
   }
+
+
+  ?>
+

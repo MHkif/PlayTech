@@ -1,17 +1,11 @@
 body {
   height: 100vh;
   background: linear-gradient(
-    110.6deg,
-    rgb(156, 116, 129) -18.3%,
-    rgb(67, 54, 74) 16.4%,
-    rgb(47, 48, 67) 68.2%,
-    rgb(27, 23, 36) 99.1%
+    109.6deg,
+    rgb(43, 1, 91) 13.4%,
+    rgb(122, 2, 54) 100.2%
   ) !important;
   display: flex;
-  /* background-image: url('../assets/imgs/1.jpg') !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-  background-size: cover !important; */
   flex-direction: column;
   justify-content: center;
 }
@@ -20,8 +14,9 @@ body {
   box-shadow: 1rem 1rem 0.5rem rgba(0, 0, 0, 0.779);
 }
 .img-left {
+  height: 100%;
   width: 45%;
-  background: url("./../assets/imgs/page\ log.jpg");
+  background: url("./../assets/imgs/login1.jpg");
   background-size: cover;
   background-size: 20em 25em;
   background-repeat: no-repeat;
