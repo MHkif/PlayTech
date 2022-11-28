@@ -1,4 +1,4 @@
-<?php require_once 'auth.php'; ?>
+<?php require_once 'auth.php'; session_status(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/all.min.css" />
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../assets/imgs/logo.png" type="image/x-icon" />
     <!-- Remix icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
     <!-- Bootstrap Links -->
@@ -28,7 +28,8 @@
 </head>
 
 <body>
-    <?php if ($msg) echo '
+    <?php if ($msg) echo
+    '
    <div class="container ">
    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
@@ -46,40 +47,42 @@
   <div>
   admin not found 
   </div>
-</div></div>'; ?>
-    <div class="container align-items-center">
+</div></div>';
+    ?>
+    <div class="row px-2 mx-4">
+        <div class="card  col-lg-10 col-xl-9 flex-row mx-auto px-0">
+            <div class="img-left d-none d-md-flex"></div>
+            <div class="col text-center d-flex flex-column  py-5 px-5">
 
-        <div class="row px-3">
-            <div class="card  col-lg-10 col-xl-9 flex-row mx-auto px-0">
-                <div class="img-left d-none d-md-flex"></div>
-                <div class="card-body justify-content-center">
-                    <h4 class="title text-center mt-4">
-                        login into account
-                    </h4>
-                    <form class="form-box px-3" action="#" method="POST">
-                        <!-- email -->
-                        <div class="form-input">
-                            <span class="col-2"><i class="fa fa-envelope-o" aria-hidden="true"></i> </span>
-                            <input class="col-10" type="email" name="email" placeholder="Email Address" required>
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                        </div>
-                        <!-- password -->
-                        <div class="form-input mt-4 ">
-                            <span class="col-2"><i class="ri-key-2-line"></i></span>
-                            <input class="col-10" type="password" name="password" placeholder="Password" required>
-                        </div>
+                <h4 class="title">
+                    <span class="titleP">P</span>layTech
 
-                        <!-- login button -->
-                        <div class="mb-3">
-                            <button type="submit" class="btn btn-block m-m-auto">LOGIN</button>
-                        </div>
+                </h4>
+                <form class="d-flex flex-column gap-3" action="#" method="POST">
+                    <div class="d-flex align-items-center">
+                        <!-- <label for="email" class="form-label d-flex align-items-center"><span class="col"><i class="fa fa-envelope-o fs-4" aria-hidden="true"></i> </span></label> -->
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <!-- <label for="pwd" class="form-label d-flex align-items-center"><span class="col"><i class="ri-key-2-line fs-4"></i></span></label> -->
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
+                    </div>
 
-                    </form>
-                </div>
+                    <div class=" form-check mb-3">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                        </label>
+                    </div>
+                    <button type="submit" name="submit" class="btn btn-dark ">Login</button>
+
+
+                </form>
+
             </div>
+
         </div>
     </div>
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>

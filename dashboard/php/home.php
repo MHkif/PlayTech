@@ -39,10 +39,11 @@ session_start();
         <div class="container-fluid">
           <a href="#" class="navbar-brand">
             <img src="../assets/imgs/logo.png" alt="Logo image" width="60" class="d-inline-block" />
+
             <span class=""> PlayTech
               <small style="font-size: 10px;">
                 <?php
-                // print_r($_SESSION);
+                print_r($_SESSION);
                 if ($_SESSION["username"]) {
                   echo $_SESSION['username'];
                 }

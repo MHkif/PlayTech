@@ -19,7 +19,9 @@ function createProduct()
       $res->execute();
       move_uploaded_file($_FILES['image']['tmp_name'], "../images/$image");
       move_uploaded_file($_FILES['img_hover']['tmp_name'], "../images/$img_hover");
+      
       header("location: ./dashboard1.php");
+
       exit();
     } catch (Exception $e) {
       die('Erreur : ' . $e->getMessage());
