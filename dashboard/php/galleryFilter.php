@@ -1,5 +1,6 @@
 <?php
 require 'functions.php';
+session_start();
 $category = getCategories();
 ?>
 
@@ -14,11 +15,10 @@ $category = getCategories();
 
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./../StyleCss/home.css" />
+    <link rel="stylesheet" href="./../StyleCss/gallery.css" />
     <link rel="stylesheet" href="./../StyleCss/FontPoppins.css" />
 
-    <!-- SCSS -->
-    <link rel="stylesheet" href="./../css/homeScss.css" />
+
 
     <!-- Bootstrap Links -->
     <link rel="stylesheet" href="./../css/bootstrap.min.css" />
@@ -38,7 +38,12 @@ $category = getCategories();
         <div class="container-fluid">
             <a href="#" class="navbar-brand">
                 <img src="../assets/imgs/logo.png" alt="Logo image" width="60" class="d-inline-block" />
-                <span class=""> PlayTech </span>
+                <span class=""> PlayTech <small style="font-size: 10px;">
+                        <?php
+                        if ($_SESSION["username"]) {
+                            echo $_SESSION['username'];
+                        }
+                        ?></small> </span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-label="Toggle navigation">
                 <i class="ri-apps-2-line"></i>
@@ -120,19 +125,24 @@ $category = getCategories();
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-
     <div class="container my-5">
+
+        <?php
+        $num = $_GET['id'];
+        $p = printCategories($num);
+        echo '<h2 class="py-3">' . $p . '</h2> '; ?>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 justify-content-start justify-content-start p-3">
             <!-- Products -->
             <?php
             $n = $_GET['id'];
             $products = getProductsCat($n);
+
             foreach ($products as $prod) {
             ?>
-                <div class="col h-100">
-                    <div class="card shadow-sm border-0 w-100" id="card">
-                        <div>
-                            <img src="../images/<?php echo $prod['image'] ?>" class="card-img-top w-100 h-75" alt="..." />
+                <div class="col">
+                    <div class="card shadow-sm border-1 w-100" id="card">
+                        <div id="makeSize">
+                            <img src="../images/<?php echo $prod['image'] ?>" class="card-img-top w-100 h-100" alt="..." />
                         </div>
 
                         <div class="card-body">

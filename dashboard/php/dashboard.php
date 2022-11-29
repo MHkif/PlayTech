@@ -1,6 +1,8 @@
 <?php
+
 require 'credentials.php';
 require 'functions.php';
+session_start();
 
 ?>
 
@@ -8,7 +10,8 @@ require 'functions.php';
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard</title>
   <!-- CSS -->
@@ -38,26 +41,35 @@ require 'functions.php';
 <body>
   <!-- Navbar  -->
 
-  <nav class="navbar navbar-expand-lg bg-light text-dark">
-    <div class="container-fluid">
-      <a href="dashboard.php" class="navbar-brand">
+  <nav class="navbar navbar-expand-lg bg-light text-dark fw-bolder">
+    <div class="container-fluid ">
+      <a href="dashboard.php" class="navbar-brand d-flex justify-content-center align-items-center">
         <img src="../assets/imgs/logo.png" alt="Logo image" width="60" class="d-inline-block" />
-        <span class=""> Dashboard </span>
+        <span class=""> Dashboard <small style="font-size: 10px; font-weight: 700;">
+            <?php
+            if ($_SESSION["username"]) {
+              echo $_SESSION['username'];
+            }
+            ?></small> </span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3 d-flex gap-2 align-items-center">
           <li>
-            <a href="./home.php" class="nav-link  mx-4">Home</a>
+            <a href="./home.php" class="nav-link">Home</a>
           </li>
 
           <form class="d-flex" role="search" method="POST">
             <input class="form-control me-2" name="keyword" type="search" placeholder="Search by Name or ID" aria-label="Search">
             <button class="btn btn-outline-dark" name="search">Search</button>
           </form>
+
+          <a href="./index.php"><button class="btn btn-primary ms-5" style=" background-color: #000; border:none;">Logout</button></a>
+
         </ul>
+
 
       </div>
     </div>

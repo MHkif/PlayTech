@@ -14,12 +14,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $res->execute();
 
 
-    $admin = $res->fetch(PDO::FETCH_ASSOC);
+    $admin = $res->fetch(PDO::FETCH_OBJ);
 
     if ($admin) {
+
+        $_SESSION['logged'] = true;
         $_SESSION['email'] = $admin->email;
         $_SESSION['password'] = $admin->password;
         $_SESSION['username'] = $admin->username;
+
         header("location:home.php");
     } else {
         $msg = true;

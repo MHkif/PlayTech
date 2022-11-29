@@ -1,6 +1,9 @@
 <?php
 session_start();
-
+if (!$_SESSION["logged"]) {
+  header('location: index.php');
+  exit();
+}
 ?>
 
 
@@ -43,7 +46,6 @@ session_start();
             <span class=""> PlayTech
               <small style="font-size: 10px;">
                 <?php
-                print_r($_SESSION);
                 if ($_SESSION["username"]) {
                   echo $_SESSION['username'];
                 }

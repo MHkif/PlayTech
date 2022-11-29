@@ -19,7 +19,7 @@ function createProduct()
       $res->execute();
       move_uploaded_file($_FILES['image']['tmp_name'], "../images/$image");
       move_uploaded_file($_FILES['img_hover']['tmp_name'], "../images/$img_hover");
-      
+
       header("location: ./dashboard1.php");
 
       exit();
@@ -92,25 +92,16 @@ function getCategories()
   return $categories;
 }
 
-function printCategories()
+function printCategories($num)
 {
-  $category = getCategories();
-  foreach ($category as $key) {
-    echo ' <div class="col">
-        <div class="card border-0 text-center">
-          <a href="" id="cate">
-            <div class="card shadow rounded-4">
-              <img src="../assets/imgs/gamming_acces.jpg" class="card-img p-4" alt="..." />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title"> echo $key["categorie"]</h5>
+  global $data;
+  $sql = "SELECT * FROM `categories` WHERE id_cat='$num'";
+  $res = $data->prepare($sql);
+  $res->execute();
 
-            </div>
-          </a>
+  $cat = $res->fetch();
 
-        </div>
-      </div>';
-  }
+  return $cat['categorie'];
 }
 
 

@@ -16,6 +16,7 @@ body {
   display: flex !important ;
   flex-direction: column !important ;
   justify-content: center !important ;
+  text-align: center;
 }
 .card {
   border-radius: 20px !important;

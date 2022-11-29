@@ -1,6 +1,6 @@
 <?php
 require 'functions.php';
-
+session_start();
 $products = getProducts();
 $category = getCategories();
 ?>
@@ -21,7 +21,8 @@ $category = getCategories();
   <link rel="stylesheet" href="../css/bootstrap.min.css" />
   <link rel="stylesheet" href="../css/all.min.css" />
 
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  <link rel="shortcut icon" href="../assets/imgs/logo.png" type="image/x-icon" />
   <!-- Remix icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
 
@@ -34,7 +35,12 @@ $category = getCategories();
     <div class="container-fluid">
       <a href="#" class="navbar-brand">
         <img src="../assets/imgs/logo.png" alt="Logo image" width="60" class="d-inline-block" />
-        <span class=""> PlayTech </span>
+        <span class=""> PlayTech <small style="font-size: 10px;">
+            <?php
+            if ($_SESSION["username"]) {
+              echo $_SESSION['username'];
+            }
+            ?></small></span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-label="Toggle navigation">
         <i class="ri-apps-2-line"></i>
@@ -120,15 +126,16 @@ $category = getCategories();
   </div>
 
   <div class="container my-5">
+    <h2 class="py-3">All Products</h2>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 justify-content-start justify-content-start p-3">
       <!-- Products -->
       <?php
       foreach ($products as $prod) {
       ?>
         <div class="col">
-          <div class="card shadow-sm border-0 w-100" id="card">
+          <div class="card shadow-sm border-1 w-100" id="card">
             <div id="makeSize">
-              <img  src="../images/<?php echo $prod['image'] ?>" class="card-img-top w-100 h-100" alt="..." />
+              <img src="../images/<?php echo $prod['image'] ?>" class="card-img-top w-100 h-100" alt="..." />
             </div>
 
             <div class="card-body">
