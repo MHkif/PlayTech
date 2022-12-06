@@ -37,8 +37,6 @@ $category = getCategories();
         <div class="container-fluid my-5">
             <div class="row p-2">
                 <div class="col-md-12">
-
-
                     <form action="" method="post" enctype="multipart/form-data">
                         <div class="mb-3">
 
