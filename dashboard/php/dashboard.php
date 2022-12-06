@@ -56,9 +56,9 @@ session_start();
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3 d-flex gap-2 align-items-center">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3 d-flex gap-2">
           <li>
-            <a href="./home.php" class="nav-link">Home</a>
+            <a href="./home.php" class="nav-link text-center">Home</a>
           </li>
 
           <form class="d-flex" role="search" method="POST">
@@ -66,7 +66,9 @@ session_start();
             <button class="btn btn-outline-dark" name="search">Search</button>
           </form>
 
-          <a href="./index.php"><button class="btn btn-primary ms-5" style=" background-color: #000; border:none;">Logout</button></a>
+          <div class="container-fluid mt-3">
+            <a href="./index.php"><button class="btn btn-primary" style=" background-color: #000; border:none;">Logout</button></a>
+          </div>
 
         </ul>
 
@@ -85,14 +87,14 @@ session_start();
             <a href="create.php" class="btn bg-dark  d-flex align-items-center text-decoration-none text-white ">New Product</a>
           </div>
 
+          <div class="container overflow-scroll">
+            <?php
+            if (isset($_POST['search'])) {
+              $keyword = $_POST['keyword'];
+              $query = $data->prepare("SELECT * FROM produits WHERE title LIKE '%$keyword%' or id_prod='$keyword' ");
+              $query->execute();
 
-          <?php
-          if (isset($_POST['search'])) {
-            $keyword = $_POST['keyword'];
-            $query = $data->prepare("SELECT * FROM produits WHERE title LIKE '%$keyword%' or id_prod='$keyword' ");
-            $query->execute();
-
-            echo '<table class="table table-bordered table-striped">
+              echo '<table class="table table-bordered table-striped">
             <thead>
               <tr>
                 <th scope="col">id</th>
@@ -104,10 +106,10 @@ session_start();
               </tr>
             </thead>
             <tbody> ';
-            while ($target = $query->fetch()) {
+              while ($target = $query->fetch()) {
 
 
-              echo '<tr>
+                echo '<tr>
                         <th scope="row">' . $target["id_prod"] . '</th>
                         <td>' . $target["title"] . '</td>
                         <td>' . $target["prix"] . '</td>
@@ -118,16 +120,16 @@ session_start();
                       </td>
                         
                       </tr>';
-              echo "</tbody>";
-              echo "</table>";
-              break;
-            }
-          } else {
-            $sql = "SELECT * FROM produits";
-            $res = $data->query($sql);
+                echo "</tbody>";
+                echo "</table>";
+                break;
+              }
+            } else {
+              $sql = "SELECT * FROM produits";
+              $res = $data->query($sql);
 
-            if ($res->rowCount() > 0) {
-              echo '<table class="table table-bordered table-striped">
+              if ($res->rowCount() > 0) {
+                echo '<table class="table table-bordered table-striped">
                 <thead>
                   <tr>
                     <th scope="col">id</th>
@@ -139,9 +141,9 @@ session_start();
                   </tr>
                 </thead>
                 <tbody> ';
-              $products = $res->fetchALL();
-              foreach ($products as $key) {
-                echo '<tr>
+                $products = $res->fetchALL();
+                foreach ($products as $key) {
+                  echo '<tr>
                   <th scope="row">' . $key["id_prod"] . '</th>
                   <td>' . $key["title"] . '</td>
                   <td>' . $key["prix"] . '</td>
@@ -152,17 +154,18 @@ session_start();
                  </td>
                    
                 </tr>';
+                }
+                echo "</tbody>";
+                echo "</table>";
+              } else {
+                echo '<div class="alert alert-danger"><em>Pas d\'enregistrement</em></div>';
               }
-              echo "</tbody>";
-              echo "</table>";
-            } else {
-              echo '<div class="alert alert-danger"><em>Pas d\'enregistrement</em></div>';
             }
-          }
 
 
 
-          ?>
+            ?>
+          </div>
         </div>
       </div>
     </div>

@@ -37,25 +37,24 @@ $category = getCategories();
                 <div class="container-fluid my-5">
                         <div class="row p-2">
                                 <div class="col-md-12">
-
-                                        <form action="" method="post">
+                                        <form action="" method="POST">
                                                 <div class="mb-3">
                                                         <form action="" method="post">
                                                                 <label for="exampleFormControlInput1" class="form-label">Product Name</label>
-                                                                <input type="text" class="form-control" name="title" id="exampleFormControlInput1" placeholder="Product name" value="<?php echo $products[0]['title'] ?>">
+                                                                <input type="text" class="form-control" name="title" id="exampleFormControlInput1" placeholder="Product name" value="<?php echo $products[0]['title'] ?>" required>
                                                 </div>
                                                 <div class="mb-3">
                                                         <label for="exampleFormControlInput1" class="form-label">Product Price</label>
-                                                        <input type="number" name="prix" class="form-control" id="exampleFormControlInput1" placeholder="Product price" value="<?php echo $products[0]['prix'] ?>">
+                                                        <input type="number" name="prix" class="form-control" id="exampleFormControlInput1" placeholder="Product price" value="<?php echo $products[0]['prix'] ?>" required>
                                                 </div>
                                                 <div class="mb-3">
                                                         <label for="exampleFormControlInput1" class="form-label">Product Quantity</label>
-                                                        <input type="number" name="quantite" class="form-control" id="exampleFormControlInput1" placeholder="Product quantity" value="<?php echo $products[0]['quantite'] ?>">
+                                                        <input type="number" name="quantite" class="form-control" id="exampleFormControlInput1" placeholder="Product quantity" value="<?php echo $products[0]['quantite'] ?>" required>
                                                 </div>
                                                 <div class="form-group mt-2 mb-5">
                                                         <label for="exampleFormControlInput1" class="form-label">Category</label>
 
-                                                        <select name="id_cat" id="" class="form-select">
+                                                        <select name="id_cat" id="" class="form-select" required>
                                                                 <?php
 
                                                                 foreach ($category as $key) {
@@ -77,7 +76,7 @@ $category = getCategories();
 
                                                 <div class="col-12 d-flex justify-content-between">
                                                         <input type="submit" class="btn btn-success rounded-5 px-4 ml-2 mt-2" name="sub" value="Update">
-                                                        <a href="dashboard1.php" class="btn btn-secondary rounded-5 px-4 ml-2 mt-2">Cancel</a>
+                                                        <a href="dashboard.php" class="btn btn-secondary rounded-5 px-4 ml-2 mt-2">Cancel</a>
                                                 </div>
                                         </form>
 

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;600&family=Poppins:wght@500;600&family=Roboto:wght@100;300;500;700&family=Ubuntu:wght@300;500&display=swap");
 
-#makeSize{
-height: 300px;
+#makeSize {
+  height: 300px !important;
 }
 .navbar {
   background: #31313168;
@@ -74,7 +74,7 @@ a {
   width: 65%;
   padding: 15px;
   vertical-align: middle; */
-  /* border: 1px dotted #bdbfc0 !important; */
+/* border: 1px dotted #bdbfc0 !important; */
 /* } */
 
 /* .card-img-tiles .main-img > img:last-child,
@@ -117,4 +117,3 @@ a {
   font-family: monospace;
   font-size: 30px !important;
 } */
-

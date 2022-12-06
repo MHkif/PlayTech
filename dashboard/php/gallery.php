@@ -74,12 +74,11 @@ $category = getCategories();
       </div>
     </div>
   </nav>
-
-  <div id="carouselExampleCaptions" class="carousel  slide " data-bs-ride="false">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
 
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div class="carousel-item active" id="#makeSize">
           <img src="../assets/imgs/bg2slid (1).jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>
@@ -90,7 +89,7 @@ $category = getCategories();
             </p>
           </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" id="#makeSize">
           <img src="../assets/imgs/imgbg 2.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>
@@ -101,8 +100,8 @@ $category = getCategories();
             </p>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="../assets/imgs/imgbg 4.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-item" id="#makeSize">
+          <img src="../assets/imgs/imgbg 4.jpg" class="d-block w-100 h-50" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>
               Shop Now

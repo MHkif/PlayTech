@@ -11,13 +11,15 @@ $category = getCategories();
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Products</title>
 
     <!-- Bootstrap Links -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/all.min.css" />
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../assets/imgs/logo.png" type="image/x-icon" />
 
     <!-- Remix icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
@@ -41,20 +43,27 @@ $category = getCategories();
                         <div class="mb-3">
 
                             <label for="exampleFormControlInput1" class="form-label">Product Name</label>
-                            <input type="text" class="form-control" name="title" id="exampleFormControlInput1" placeholder="Product name">
+                            <input type="text" class="form-control" name="title" id="exampleFormControlInput1" placeholder="Product name" required>
                         </div>
+                        <!-- <div class="mb-3">
+    <label for="validationCustom01" class="form-label">Product Name</label>
+    <input type="text" class="form-control" id="validationCustom01" name="title"  required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div> -->
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Product Price</label>
-                            <input type="number" name="prix" class="form-control" id="exampleFormControlInput1" placeholder="Product price">
+                            <input type="number" name="prix" class="form-control" id="exampleFormControlInput1" placeholder="Product price" required>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Product Quantity</label>
-                            <input type="number" name="quantite" class="form-control" id="exampleFormControlInput1" placeholder="Product quantity">
+                            <input type="number" name="quantite" class="form-control" id="exampleFormControlInput1" placeholder="Product quantity" required>
                         </div>
                         <div class="form-group mt-2 mb-5">
                             <label for="exampleFormControlInput1" class="form-label">Category</label>
 
-                            <select name="id_cat" id="" class="form-select">
+                            <select name="id_cat" id="" class="form-select" required>
                                 <?php
 
                                 foreach ($category as $key) {
@@ -73,13 +82,13 @@ $category = getCategories();
                         </div>
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Product Image</label>
-                            <input class="form-control" type="file" name="image" id="formFile">
+                            <input class="form-control" type="file" name="image" id="formFile" required>
                         </div>
 
 
                         <div class="col-12 d-flex justify-content-between">
                             <input type="submit" class="btn btn-primary rounded-3 px-4 ml-2 mt-2" name="sub" value="Add">
-                            <a href="dashboard1.php" class="btn btn-secondary rounded-3 px-4 ml-2 mt-2">Cancel</a>
+                            <a href="dashboard.php" class="btn btn-secondary rounded-3 px-4 ml-2 mt-2">Cancel</a>
                         </div>
 
 
