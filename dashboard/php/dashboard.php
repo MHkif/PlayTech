@@ -56,9 +56,9 @@ session_start();
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3 d-flex gap-2">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3 d-flex gap-2 align-items-center">
           <li>
-            <a href="./home.php" class="nav-link text-center">Home</a>
+            <a href="./home.php" class="nav-link">Home</a>
           </li>
 
           <form class="d-flex" role="search" method="POST">
@@ -66,9 +66,7 @@ session_start();
             <button class="btn btn-outline-dark" name="search">Search</button>
           </form>
 
-          <div class="container-fluid mt-3">
-            <a href="./index.php"><button class="btn btn-primary" style=" background-color: #000; border:none;">Logout</button></a>
-          </div>
+          <a href="./index.php"><button class="btn btn-primary ms-5" style=" background-color: #000; border:none;">Logout</button></a>
 
         </ul>
 
@@ -76,6 +74,7 @@ session_start();
       </div>
     </div>
   </nav>
+
 
   <div class="container">
     <div class="container-fluid my-5">
