@@ -27,6 +27,13 @@ $category = getCategories();
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
 
   <title>Play Tech</title>
+  <style>
+    @media screen and (max-width: 767px) {
+      .sizing {
+        height: 300px !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -74,57 +81,59 @@ $category = getCategories();
       </div>
     </div>
   </nav>
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+  <div class="sizing">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
 
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active" id="#makeSize">
-          <img src="../assets/imgs/bg2slid (1).jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>
-              Shop Now
-            </h5>
-            <p class="d-none d-md-block">
-              Some representative placeholder content for the first slide.
-            </p>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" id="#makeSize">
+            <img src="../assets/imgs/bg2slid (1).jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>
+                Shop Now
+              </h5>
+              <p class="d-none d-md-block">
+                Some representative placeholder content for the first slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" id="#makeSize">
+            <img src="../assets/imgs/imgbg 2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>
+                Shop Now
+              </h5>
+              <p class="d-none d-none d-md-block">
+                Some representative placeholder content for the first slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" id="#makeSize">
+            <img src="../assets/imgs/imgbg 4.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>
+                Shop Now
+              </h5>
+              <p class="d-none d-none d-md-block">
+                Some representative placeholder content for the first slide.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="carousel-item" id="#makeSize">
-          <img src="../assets/imgs/imgbg 2.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>
-              Shop Now
-            </h5>
-            <p class="d-none d-none d-md-block">
-              Some representative placeholder content for the first slide.
-            </p>
-          </div>
-        </div>
-        <div class="carousel-item" id="#makeSize">
-          <img src="../assets/imgs/imgbg 4.jpg" class="d-block w-100 h-50" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>
-              Shop Now
-            </h5>
-            <p class="d-none d-none d-md-block">
-              Some representative placeholder content for the first slide.
-            </p>
-          </div>
-        </div>
+
       </div>
-
+      <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
 
-  <div class="container my-5">
+  <div class="container my-3">
     <h2 class="py-3">All Products</h2>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 justify-content-start justify-content-start p-3">
       <!-- Products -->
@@ -153,15 +162,16 @@ $category = getCategories();
 
 
     </div>
-    <div class="row  justify-content-between p-3 my-5">
-      <div class="col-12 col-md-8 ">
+    <div class="row  justify-content-between  align-items-center p-3 my-5 ">
+      <div class="col d-none d-md-block ">
+        <h4 class="text-secondary">Lorem ipsum dolor sit consectetur adipisicing elit. Totam laborum ea, deleniti, similique dolores nobis quibusdam exercitationem nisi vel quos! Totam laborum ea, deleniti, similique dolores nobis quibusdam Totam laborum ea, deleniti, similique dolores nobis quibusdam voluptate exercitationem nisi vel quos! Totam laborum ea, deleniti </h4>
+      </div>
+      <div class="col-12 col-md-7 ">
         <video style=" width:100%;border-radius: 10px; box-shadow:  1px 1px 2px rgb(14, 13, 14), 0 0 25px rgba(4, 32, 142, 0.886), 0 0 50px rgba(18, 4, 83, 0.575) ; " width="50%" height="auto" autoplay muted controls>
           <source src="https://media.direct.playstation.com/is/content/sierialto/dualsense-edge-ps5-controller-features-trailer">
         </video>
       </div>
-      <div class="col-4 d-none d-md-block  ">
-        <h1 class="mx-5 my-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid</h1>
-      </div>
+
 
     </div>
   </div>

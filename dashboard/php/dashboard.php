@@ -56,7 +56,7 @@ session_start();
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3 d-flex gap-2">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3 d-flex gap-2 align-items-center">
           <li>
             <a href="./home.php" class="nav-link text-center">Home</a>
           </li>

@@ -30,6 +30,13 @@ $category = getCategories();
 
 
     <title>Play Tech</title>
+    <style>
+        @media screen and (max-width: 767px) {
+            .sizing {
+                height: 300px !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +87,7 @@ $category = getCategories();
 
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="carousel-item active" id="#makeSize">
                     <img src="../assets/imgs/bg2slid (1).jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>
@@ -91,7 +98,7 @@ $category = getCategories();
                         </p>
                     </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" id="#makeSize">
                     <img src="../assets/imgs/imgbg 2.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>
@@ -102,7 +109,7 @@ $category = getCategories();
                         </p>
                     </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" id="#makeSize">
                     <img src="../assets/imgs/imgbg 4.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>
